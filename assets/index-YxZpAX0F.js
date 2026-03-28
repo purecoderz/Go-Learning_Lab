@@ -7557,7 +7557,7 @@ import "fmt"
 func main() {
     // Your code here!
     
-}`,title:`Mission 22: Type Discovery with %T`,description:`Master the %T format verb in fmt.Printf to discover and confirm variable types. Learn to identify float64, string, int, and bool types in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Discover float64`,text:"**Task 1:** Create variable `amount := 50.5` and use `fmt.Printf` with `%T` to show what type `amount` is. Print it like this: `The type of amount is: [type here]`",challengeType:`code`,defaultCode:`package main
+}`,title:`fmt.printf("%T") 1: Type Discovery with %T`,description:`Master the %T format verb in fmt.Printf to discover and confirm variable types. Learn to identify float64, string, int, and bool types in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Discover float64`,text:"**Task 1:** Create variable `amount := 50.5` and use `fmt.Printf` with `%T` to show what type `amount` is. Print it like this: `The type of amount is: [type here]`",challengeType:`code`,defaultCode:`package main
 
 import "fmt"
 
@@ -7825,7 +7825,7 @@ import "fmt"
 func main() {
     // Your code here!
     
-}`,title:`Mission 23: String Length with len()`,description:`Master the len() function to count characters in strings! Build snack counters, password checkers, username validators, and receipt generators using fmt.Scan() and len().`,learningSteps:[{id:1,heading:`🍿 Task 1: The Basic Measurement`,text:"**Task 1 - The Basic Measurement:**\nAsk user to enter their **best Nigerian snack** using `fmt.Scan()`. Then use `len()` tell them exactly how many characters dey inside their snack name. Format: `Your snack '[input]' get [number] characters`",challengeType:`code`,defaultCode:`package main
+}`,title:`LENGTH 3: String Length with len()`,description:`Master the len() function to count characters in strings! Build snack counters, password checkers, username validators, and receipt generators using fmt.Scan() and len().`,learningSteps:[{id:1,heading:`🍿 Task 1: The Basic Measurement`,text:"**Task 1 - The Basic Measurement:**\nAsk user to enter their **best Nigerian snack** using `fmt.Scan()`. Then use `len()` tell them exactly how many characters dey inside their snack name. Format: `Your snack '[input]' get [number] characters`",challengeType:`code`,defaultCode:`package main
 
 import "fmt"
 
@@ -8257,7 +8257,7 @@ import "fmt"
 func main() {
     // Your code here!
     
-}`,title:`Mission 24: Bracket Notation [0] - Byte Discovery`,description:`Discover what brackets really return! Learn that word[0] gives byte numbers (not letters), build byte tables, and understand the foundation of string indexing in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Meet The Bracket`,text:"**Task 1 - Meet The Bracket:**\nAsk user to enter **their first name** using `fmt.Scan()`. Use bracket `[0]` to point at first position and print wetin you see. Format: `Your name '[name]' get [length] characters. Using bracket [0] give us: [weird number]`",challengeType:`code`,defaultCode:`package main
+}`,title:`Index 3: Bracket Notation [0] - Byte Discovery`,description:`Discover what brackets really return! Learn that word[0] gives byte numbers (not letters), build byte tables, and understand the foundation of string indexing in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Meet The Bracket`,text:"**Task 1 - Meet The Bracket:**\nAsk user to enter **their first name** using `fmt.Scan()`. Use bracket `[0]` to point at first position and print wetin you see. Format: `Your name '[name]' get [length] characters. Using bracket [0] give us: [weird number]`",challengeType:`code`,defaultCode:`package main
 
 import "fmt"
 
