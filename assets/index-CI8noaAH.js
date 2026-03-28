@@ -818,7 +818,7 @@ func main() {
 2. A string: 'true' (with quotes)
 3. An integer: 1 (number, no quotes)
 
-This proves you know the difference between bool, string, and int!`,check:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/fmt\.Println\(\s*true\s*\)/.test(e)||/fmt\.Println\(\s*false\s*\)/.test(e),a=/fmt\.Println\(\s*".*"\s*\)/.test(e),o=/fmt\.Println\(\s*\d+\s*\)/.test(e),s=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o&&s},successMessage:`Boolean master! You can distinguish between bool (true/false), string ('true'), and int (1). Three types, three different purposes! 🎯✨`}],conceptSummary:{title:`Boolean (bool) Essentials`,points:[`**bool** = only two values: true or false (no other options!)`,`**No quotes**: true is a boolean, "true" is a string`,`**No numbers**: true/false, not 1/0 (that's int!)`,`**Uses**: On/off switches, yes/no answers, logic checks`,`**Comparison**: true looks like 'true' and 1, but Go treats them completely differently`,`**Later use**: if statements (if isActive == true), loops, logic`]}},{id:4,lesson:{pigin:'\n\n---\n\n## 📚 Complete Summary: Data Types in Go\n\n### 1. Strings 📝\n- **Wetin:** Text data\n- **How:** Inside double quotes `" "`\n- **Example:** `"Hello"`, `"123"`, `"true"`\n- **Remember:** Even number inside quotes na text, no be number!\n\n---\n\n### 2. Integers 🔢\n- **Wetin:** Whole numbers (no decimal)\n- **How:** Just write am, no quotes\n- **Example:** `5`, `100`, `-20`\n- **Remember:** `5 + 5` = `10` (Go calculate), but `"5" + "5"` = `55` (Go join text)\n\n---\n\n### 3. Floats 🎯\n- **Wetin:** Decimal numbers\n- **How:** Must get decimal point `.`\n- **Example:** `5.5`, `3.14`, `100.0`\n- **Remember:** `5 / 2` = `2` (integer cut remainder), but `5.0 / 2.0` = `2.5` (float give correct answer)\n\n---\n\n### 4. Booleans ✅❌\n- **Wetin:** Only two values — true or false\n- **How:** All small letters, no quotes\n- **Example:** `true`, `false`\n- **Remember:** `"true"` na string, `true` na boolean — different things!\n\n---\n\n## 🎯 The Golden Rule\n\n**Quotes matter!**\n- With `" "` → String (text)\n- Without `" "` → Integer, Float, or Boolean (actual data)\n\n---\n\nWe don finish! You fit always come back if you wan learn **variables** (how to store these data types) or any other thing for Go. 🚀',eng:'\n\n---\n\n## 📚 Complete Summary: Data Types in Go\n\n### 1. Strings 📝\n- **What:** Text data\n- **How:** Inside double quotes `" "`\n- **Example:** `"Hello"`, `"123"`, `"true"`\n- **Remember:** Even a number inside quotes is text, not a number!\n\n---\n\n### 2. Integers 🔢\n- **What:** Whole numbers (no decimal)\n- **How:** Just write it, no quotes\n- **Example:** `5`, `100`, `-20`\n- **Remember:** `5 + 5` = `10` (Go calculates), but `"5" + "5"` = `55` (Go joins text)\n\n---\n\n### 3. Floats 🎯\n- **What:** Decimal numbers\n- **How:** Must have a decimal point `.`\n- **Example:** `5.5`, `3.14`, `100.0`\n- **Remember:** `5 / 2` = `2` (integer cuts off remainder), but `5.0 / 2.0` = `2.5` (float gives correct answer)\n\n---\n\n### 4. Booleans ✅❌\n- **What:** Only two values — true or false\n- **How:** All lowercase letters, no quotes\n- **Example:** `true`, `false`\n- **Remember:** `"true"` is a string, `true` is a boolean — different things!\n\n---\n\n## 🎯 The Golden Rule\n\n**Quotes matter!**\n- With `" "` → String (text)\n- Without `" "` → Integer, Float, or Boolean (actual data)\n\n---\n\nWe are finished! You can always come back if you want to learn **variables** (how to store these data types) or anything else in Go. 🚀'},title:`Datatypes 4: Data Types Review Quiz`,description:`Test your knowledge of strings, integers, floats, and booleans with 10 objective questions. Choose the correct answer for each!`,learningSteps:[{id:1,heading:`Question 1`,text:'What is the output of this code?\n```go\nfmt.Println("5" + "5")\n```',challengeType:`quiz`,question:`What does fmt.Println("5" + "5") output?`,options:[`10`,`55`,`5 + 5`,`Error`],correctAnswerIndex:1,explanation:`"5" is a string, so + joins them together: "55". This is string concatenation, not math!`},{id:2,heading:`Question 2`,text:`Which one is a correct Integer?`,challengeType:`quiz`,question:`Which is a valid int (integer)?`,options:[`"100"`,`100.0`,`100`,`true`],correctAnswerIndex:2,explanation:`100 is an integer (whole number, no quotes, no decimals). "100" is a string, 100.0 is a float, true is a boolean.`},{id:3,heading:`Question 3`,text:'What is the difference between `5` and `"5"` in Go?',challengeType:`quiz`,question:`What is the difference between 5 and "5"?`,options:[`No difference, both are numbers`,`5 is Integer, "5" is String`,`5 is Float, "5" is Integer`,`Both are Boolean`],correctAnswerIndex:1,explanation:`5 is an int (can do math). "5" is a string (text, can only concatenate). Different types, different uses!`},{id:4,heading:`Question 4`,text:"What will this code print?\n```go\nfmt.Println(10 / 3)\n```",challengeType:`quiz`,question:`What does 10 / 3 print?`,options:[`3.33`,`3`,`3.0`,`Error`],correctAnswerIndex:1,explanation:`10 and 3 are integers, so Go does integer division: 10 / 3 = 3 (remainder 1 is dropped). No decimals with int!`},{id:5,heading:`Question 5`,text:`Which one is a valid Float?`,challengeType:`quiz`,question:`Which is a valid float64?`,options:[`5`,`"5.5"`,`5.5`,`true`],correctAnswerIndex:2,explanation:`5.5 is a float (has decimal point). 5 is int, "5.5" is string, true is bool.`},{id:6,heading:`Question 6`,text:"What is the output of this code?\n```go\nfmt.Println(true)\n```",challengeType:`quiz`,question:`What does fmt.Println(true) output?`,options:[`"true"`,`true`,`1`,`Error`],correctAnswerIndex:1,explanation:`true is a boolean. It prints as true (no quotes). "true" would be a string, 1 would be an int.`},{id:7,heading:`Question 7`,text:"If you want to calculate `7.0 / 2.0`, which data type are you using?",challengeType:`quiz`,question:`7.0 / 2.0 uses which data type?`,options:[`Integer`,`String`,`Float`,`Boolean`],correctAnswerIndex:2,explanation:`7.0 and 2.0 have decimal points, so they are floats (float64). Float division gives 3.5, not 3!`},{id:8,heading:`Question 8`,text:'This code has an error. Why?\n```go\nfmt.Println("10" + 5)\n```',challengeType:`quiz`,question:`Why does "10" + 5 cause an error?`,options:[`You cannot add number to text`,`Missing semicolon`,`fmt.Println does not work`,`5 should be "5.0"`],correctAnswerIndex:0,explanation:`"10" is a string, 5 is an int. Go cannot mix types with +. Both must be strings (for joining) or both ints (for math).`},{id:9,heading:`Question 9`,text:"What is the output?\n```go\nfmt.Println(5.0 + 2.0)\n```",challengeType:`quiz`,question:`What does 5.0 + 2.0 print?`,options:[`52`,`7`,`7.0`,`"7.0"`],correctAnswerIndex:2,explanation:`5.0 and 2.0 are floats, so result is 7.0 (float). Not 7 (that would be int) and not "7.0" (that would be string).`},{id:10,heading:`Question 10`,text:`Which one is NOT a valid data type value in Go?`,challengeType:`quiz`,question:`Which is NOT valid?`,options:[`"false" (with quotes)`,`false (without quotes)`,`0`,`-50.5`],correctAnswerIndex:0,explanation:`Wait — actually all are valid! "false" is a string, false is bool, 0 is int, -50.5 is float. Trick question — they are all valid, just different types!`}],gameTasks:[{id:1,description:`🚀 Final Challenge: Data Type Detective`,details:`Write a program that prints 4 lines showing you understand all data types:
+This proves you know the difference between bool, string, and int!`,check:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/fmt\.Println\(\s*true\s*\)/.test(e)||/fmt\.Println\(\s*false\s*\)/.test(e),a=/fmt\.Println\(\s*".*"\s*\)/.test(e),o=/fmt\.Println\(\s*\d+\s*\)/.test(e),s=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o&&s},successMessage:`Boolean master! You can distinguish between bool (true/false), string ('true'), and int (1). Three types, three different purposes! 🎯✨`}],conceptSummary:{title:`Boolean (bool) Essentials`,points:[`**bool** = only two values: true or false (no other options!)`,`**No quotes**: true is a boolean, "true" is a string`,`**No numbers**: true/false, not 1/0 (that's int!)`,`**Uses**: On/off switches, yes/no answers, logic checks`,`**Comparison**: true looks like 'true' and 1, but Go treats them completely differently`,`**Later use**: if statements (if isActive == true), loops, logic`]}},{id:4,lesson:{pigin:'\n\n---\n\n## 📚 Complete Summary: Data Types in Go\n\n### 1. Strings 📝\n- **Wetin:** Text data\n- **How:** Inside double quotes `" "`\n- **Example:** `"Hello"`, `"123"`, `"true"`\n- **Remember:** Even number inside quotes na text, no be number!\n\n---\n\n### 2. Integers 🔢\n- **Wetin:** Whole numbers (no decimal)\n- **How:** Just write am, no quotes\n- **Example:** `5`, `100`, `-20`\n- **Remember:** `5 + 5` = `10` (Go calculate), but `"5" + "5"` = `55` (Go join text)\n\n---\n\n### 3. Floats 🎯\n- **Wetin:** Decimal numbers\n- **How:** Must get decimal point `.`\n- **Example:** `5.5`, `3.14`, `100.0`\n- **Remember:** `5 / 2` = `2` (integer cut remainder), but `5.0 / 2.0` = `2.5` (float give correct answer)\n\n---\n\n### 4. Booleans ✅❌\n- **Wetin:** Only two values — true or false\n- **How:** All small letters, no quotes\n- **Example:** `true`, `false`\n- **Remember:** `"true"` na string, `true` na boolean — different things!\n\n---\n\n## 🎯 The Golden Rule\n\n**Quotes matter!**\n- With `" "` → String (text)\n- Without `" "` → Integer, Float, or Boolean (actual data)\n\n---\n\nWe don finish! You fit always come back if you wan learn **variables** (how to store these data types) or any other thing for Go. 🚀',eng:'\n\n---\n\n## 📚 Complete Summary: Data Types in Go\n\n### 1. Strings 📝\n- **What:** Text data\n- **How:** Inside double quotes `" "`\n- **Example:** `"Hello"`, `"123"`, `"true"`\n- **Remember:** Even a number inside quotes is text, not a number!\n\n---\n\n### 2. Integers 🔢\n- **What:** Whole numbers (no decimal)\n- **How:** Just write it, no quotes\n- **Example:** `5`, `100`, `-20`\n- **Remember:** `5 + 5` = `10` (Go calculates), but `"5" + "5"` = `55` (Go joins text)\n\n---\n\n### 3. Floats 🎯\n- **What:** Decimal numbers\n- **How:** Must have a decimal point `.`\n- **Example:** `5.5`, `3.14`, `100.0`\n- **Remember:** `5 / 2` = `2` (integer cuts off remainder), but `5.0 / 2.0` = `2.5` (float gives correct answer)\n\n---\n\n### 4. Booleans ✅❌\n- **What:** Only two values — true or false\n- **How:** All lowercase letters, no quotes\n- **Example:** `true`, `false`\n- **Remember:** `"true"` is a string, `true` is a boolean — different things!\n\n---\n\n## 🎯 The Golden Rule\n\n**Quotes matter!**\n- With `" "` → String (text)\n- Without `" "` → Integer, Float, or Boolean (actual data)\n\n---\n\nWe are finished! You can always come back if you want to learn **variables** (how to store these data types) or anything else in Go. 🚀'},title:`Datatypes 4: Data Types Review Quiz`,description:`Test your knowledge of strings, integers, floats, and booleans with 10 objective questions. Choose the correct answer for each!`,learningSteps:[{id:1,heading:`Question 1`,text:'What is the output of this code?\n```go\nfmt.Println("5" + "5")\n```',challengeType:`quiz`,question:`What does fmt.Println("5" + "5") output?`,options:[`10`,`55`,`5 + 5`,`Error`],correctAnswerIndex:1,explanation:`"5" is a string, so + joins them together: "55". This is string concatenation, not math!`},{id:2,heading:`Question 2`,text:`Which one is a correct Integer?`,challengeType:`quiz`,question:`Which is a valid int (integer)?`,options:[`"100"`,`100.0`,`100`,`true`],correctAnswerIndex:2,explanation:`100 is an integer (whole number, no quotes, no decimals). "100" is a string, 100.0 is a float, true is a boolean.`},{id:3,heading:`Question 3`,text:'What is the difference between `5` and `"5"` in Go?',challengeType:`quiz`,question:`What is the difference between 5 and "5"?`,options:[`No difference, both are numbers`,`5 is Integer, "5" is String`,`5 is Float, "5" is Integer`,`Both are Boolean`],correctAnswerIndex:1,explanation:`5 is an int (can do math). "5" is a string (text, can only concatenate). Different types, different uses!`},{id:4,heading:`Question 4`,text:"What will this code print?\n```go\nfmt.Println(10 / 3)\n```",challengeType:`quiz`,question:`What does 10 / 3 print?`,options:[`3.33`,`3`,`3.0`,`Error`],correctAnswerIndex:1,explanation:`10 and 3 are integers, so Go does integer division: 10 / 3 = 3 (remainder 1 is dropped). No decimals with int!`},{id:5,heading:`Question 5`,text:`Which one is a valid Float?`,challengeType:`quiz`,question:`Which is a valid float64?`,options:[`5`,`"5.5"`,`5.5`,`true`],correctAnswerIndex:2,explanation:`5.5 is a float (has decimal point). 5 is int, "5.5" is string, true is bool.`},{id:6,heading:`Question 6`,text:"What is the output of this code?\n```go\nfmt.Println(true)\n```",challengeType:`quiz`,question:`What does fmt.Println(true) output?`,options:[`"true"`,`true`,`1`,`Error`],correctAnswerIndex:1,explanation:`true is a boolean. It prints as true (no quotes). "true" would be a string, 1 would be an int.`},{id:7,heading:`Question 7`,text:"If you want to calculate `7.0 / 2.0`, which data type are you using?",challengeType:`quiz`,question:`7.0 / 2.0 uses which data type?`,options:[`Integer`,`String`,`Float`,`Boolean`],correctAnswerIndex:2,explanation:`7.0 and 2.0 have decimal points, so they are floats (float64). Float division gives 3.5, not 3!`},{id:8,heading:`Question 8`,text:'This code has an error. Why?\n```go\nfmt.Println("10" + 5)\n```',challengeType:`quiz`,question:`Why does "10" + 5 cause an error?`,options:[`You cannot add number to text`,`Missing semicolon`,`fmt.Println does not work`,`5 should be "5.0"`],correctAnswerIndex:0,explanation:`"10" is a string, 5 is an int. Go cannot mix types with +. Both must be strings (for joining) or both ints (for math).`},{id:9,heading:`Question 9`,text:"What is the output?\n```go\nfmt.Println(5.0 + 2.0)\n```",challengeType:`quiz`,question:`What does 5.0 + 2.0 print?`,options:[`52`,`7`,`7.0`,`"7.0"`],correctAnswerIndex:1,explanation:`Because 5.0 and 2.0 are floats, the mathematical result is stored as a float. It will display as 7 (without the .0), but it is still fundamentally a floating-point number under the hood, not an integer or the string "7.0".`},{id:10,heading:`Question 10`,text:`Which one is NOT a valid data type value in Go?`,challengeType:`quiz`,question:`Which is NOT valid?`,options:[`"false" (with quotes)`,`false (without quotes)`,`0`,`-50.5`],correctAnswerIndex:0,explanation:`Wait — actually all are valid! "false" is a string, false is bool, 0 is int, -50.5 is float. Trick question — they are all valid, just different types!`}],gameTasks:[{id:1,description:`🚀 Final Challenge: Data Type Detective`,details:`Write a program that prints 4 lines showing you understand all data types:
 1. An integer: 42
 2. A float: 3.14
 3. A string: 'Go is fun'
@@ -7272,7 +7272,1105 @@ func main() {
 4. Calculates final price: original - (original * discount / 100)
 5. Prints formatted result with 2 decimal places
 
-Show that you have mastered all input types and calculations!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_string_var`,description:`Declare a string variable for product name`,test:e=>/var\s+\w+\s+string/.test(e)},{id:`req_float_vars`,description:`Declare at least two float64 variables (price and discount)`,test:e=>(e.match(/var\s+\w+\s+float64/g)||[]).length>=2},{id:`req_scans`,description:`Use fmt.Scan at least 3 times`,test:e=>(e.match(/fmt\.Scan\(/g)||[]).length>=3},{id:`req_ampersands`,description:`Use the & 'Save Symbol' for every Scan`,test:e=>(e.match(/fmt\.Scan\(\s*&/g)||[]).length>=3},{id:`req_calculation`,description:`Calculate discount (original * discount / 100) or final price`,test:e=>/\w+\s*\*\s*\w+\s*\/\s*100/.test(e)||/\w+\s*-\s*\w+/.test(e)},{id:`req_print`,description:`Print the result with fmt.Printf or fmt.Println`,test:e=>/fmt\.Printf/.test(e)||/fmt\.Println/.test(e)},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`Perfect! You have mastered user input with fmt.Scan! You can handle strings, integers, and floats, and perform calculations with them. Ready for the next challenge! 🎯✨`}],conceptSummary:{title:`User Input Practice Essentials`,points:[`**Always use & in fmt.Scan** - fmt.Scan(&variable) is required to save input`,`**Match variable types** - string for text, int for whole numbers, float64 for decimals`,`**Convert types when needed** - Use float64(intVariable) to convert int to float64 for calculations`,`**Calculate after scanning** - You must scan values before you can use them in calculations`,`**Format output with Printf** - Use %.2f for 2 decimal places on floats`,`**Order matters** - Declare variables, ask questions, scan input, then calculate and print`,`**Test your code** - Run and enter sample data to verify your program works correctly`]}}]}];function b(e,t){var n={};for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r]);if(e!=null&&typeof Object.getOwnPropertySymbols==`function`)for(var i=0,r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]]);return n}function x(e,t,n,r){function i(e){return e instanceof n?e:new n(function(t){t(e)})}return new(n||=Promise)(function(n,a){function o(e){try{c(r.next(e))}catch(e){a(e)}}function s(e){try{c(r.throw(e))}catch(e){a(e)}}function c(e){e.done?n(e.value):i(e.value).then(o,s)}c((r=r.apply(e,t||[])).next())})}var S=e=>e?(...t)=>e(...t):(...e)=>fetch(...e),C=class extends Error{constructor(e,t=`FunctionsError`,n){super(e),this.name=t,this.context=n}},w=class extends C{constructor(e){super(`Failed to send a request to the Edge Function`,`FunctionsFetchError`,e)}},T=class extends C{constructor(e){super(`Relay Error invoking the Edge Function`,`FunctionsRelayError`,e)}},E=class extends C{constructor(e){super(`Edge Function returned a non-2xx status code`,`FunctionsHttpError`,e)}},D;(function(e){e.Any=`any`,e.ApNortheast1=`ap-northeast-1`,e.ApNortheast2=`ap-northeast-2`,e.ApSouth1=`ap-south-1`,e.ApSoutheast1=`ap-southeast-1`,e.ApSoutheast2=`ap-southeast-2`,e.CaCentral1=`ca-central-1`,e.EuCentral1=`eu-central-1`,e.EuWest1=`eu-west-1`,e.EuWest2=`eu-west-2`,e.EuWest3=`eu-west-3`,e.SaEast1=`sa-east-1`,e.UsEast1=`us-east-1`,e.UsWest1=`us-west-1`,e.UsWest2=`us-west-2`})(D||={});var O=class{constructor(e,{headers:t={},customFetch:n,region:r=D.Any}={}){this.url=e,this.headers=t,this.region=r,this.fetch=S(n)}setAuth(e){this.headers.Authorization=`Bearer ${e}`}invoke(e){return x(this,arguments,void 0,function*(e,t={}){let n,r;try{let{headers:i,method:a,body:o,signal:s,timeout:c}=t,l={},{region:u}=t;u||=this.region;let d=new URL(`${this.url}/${e}`);u&&u!==`any`&&(l[`x-region`]=u,d.searchParams.set(`forceFunctionRegion`,u));let f;o&&(i&&!Object.prototype.hasOwnProperty.call(i,`Content-Type`)||!i)?typeof Blob<`u`&&o instanceof Blob||o instanceof ArrayBuffer?(l[`Content-Type`]=`application/octet-stream`,f=o):typeof o==`string`?(l[`Content-Type`]=`text/plain`,f=o):typeof FormData<`u`&&o instanceof FormData?f=o:(l[`Content-Type`]=`application/json`,f=JSON.stringify(o)):f=o&&typeof o!=`string`&&!(typeof Blob<`u`&&o instanceof Blob)&&!(o instanceof ArrayBuffer)&&!(typeof FormData<`u`&&o instanceof FormData)?JSON.stringify(o):o;let p=s;c&&(r=new AbortController,n=setTimeout(()=>r.abort(),c),s?(p=r.signal,s.addEventListener(`abort`,()=>r.abort())):p=r.signal);let m=yield this.fetch(d.toString(),{method:a||`POST`,headers:Object.assign(Object.assign(Object.assign({},l),this.headers),i),body:f,signal:p}).catch(e=>{throw new w(e)}),h=m.headers.get(`x-relay-error`);if(h&&h===`true`)throw new T(m);if(!m.ok)throw new E(m);let g=(m.headers.get(`Content-Type`)??`text/plain`).split(`;`)[0].trim(),_;return _=g===`application/json`?yield m.json():g===`application/octet-stream`||g===`application/pdf`?yield m.blob():g===`text/event-stream`?m:g===`multipart/form-data`?yield m.formData():yield m.text(),{data:_,error:null,response:m}}catch(e){return{data:null,error:e,response:e instanceof E||e instanceof T?e.context:void 0}}finally{n&&clearTimeout(n)}})}},k=class extends Error{constructor(e){super(e.message),this.name=`PostgrestError`,this.details=e.details,this.hint=e.hint,this.code=e.code}},ee=class{constructor(e){this.shouldThrowOnError=!1,this.method=e.method,this.url=e.url,this.headers=new Headers(e.headers),this.schema=e.schema,this.body=e.body,this.shouldThrowOnError=e.shouldThrowOnError??!1,this.signal=e.signal,this.isMaybeSingle=e.isMaybeSingle??!1,this.urlLengthLimit=e.urlLengthLimit??8e3,e.fetch?this.fetch=e.fetch:this.fetch=fetch}throwOnError(){return this.shouldThrowOnError=!0,this}setHeader(e,t){return this.headers=new Headers(this.headers),this.headers.set(e,t),this}then(e,t){var n=this;this.schema===void 0||([`GET`,`HEAD`].includes(this.method)?this.headers.set(`Accept-Profile`,this.schema):this.headers.set(`Content-Profile`,this.schema)),this.method!==`GET`&&this.method!==`HEAD`&&this.headers.set(`Content-Type`,`application/json`);let r=this.fetch,i=r(this.url.toString(),{method:this.method,headers:this.headers,body:JSON.stringify(this.body),signal:this.signal}).then(async e=>{let t=null,r=null,i=null,a=e.status,o=e.statusText;if(e.ok){if(n.method!==`HEAD`){let t=await e.text();t===``||(r=n.headers.get(`Accept`)===`text/csv`||n.headers.get(`Accept`)&&n.headers.get(`Accept`)?.includes(`application/vnd.pgrst.plan+text`)?t:JSON.parse(t))}let s=n.headers.get(`Prefer`)?.match(/count=(exact|planned|estimated)/),c=e.headers.get(`content-range`)?.split(`/`);s&&c&&c.length>1&&(i=parseInt(c[1])),n.isMaybeSingle&&n.method===`GET`&&Array.isArray(r)&&(r.length>1?(t={code:`PGRST116`,details:`Results contain ${r.length} rows, application/vnd.pgrst.object+json requires 1 row`,hint:null,message:`JSON object requested, multiple (or no) rows returned`},r=null,i=null,a=406,o=`Not Acceptable`):r=r.length===1?r[0]:null)}else{var s;let i=await e.text();try{t=JSON.parse(i),Array.isArray(t)&&e.status===404&&(r=[],t=null,a=200,o=`OK`)}catch{e.status===404&&i===``?(a=204,o=`No Content`):t={message:i}}if(t&&n.isMaybeSingle&&!(t==null||(s=t.details)==null)&&s.includes(`0 rows`)&&(t=null,a=200,o=`OK`),t&&n.shouldThrowOnError)throw new k(t)}return{error:t,data:r,count:i,status:a,statusText:o}});return this.shouldThrowOnError||(i=i.catch(e=>{let t=``,n=``,r=``,i=e?.cause;if(i){let n=i?.message??``,r=i?.code??``;t=`${e?.name??`FetchError`}: ${e?.message}`,t+=`\n\nCaused by: ${i?.name??`Error`}: ${n}`,r&&(t+=` (${r})`),i?.stack&&(t+=`\n${i.stack}`)}else t=e?.stack??``;let a=this.url.toString().length;return e?.name===`AbortError`||e?.code===`ABORT_ERR`?(r=``,n=`Request was aborted (timeout or manual cancellation)`,a>this.urlLengthLimit&&(n+=`. Note: Your request URL is ${a} characters, which may exceed server limits. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [many IDs])), consider using an RPC function to pass values server-side.`)):(i?.name===`HeadersOverflowError`||i?.code===`UND_ERR_HEADERS_OVERFLOW`)&&(r=``,n=`HTTP headers exceeded server limits (typically 16KB)`,a>this.urlLengthLimit&&(n+=`. Your request URL is ${a} characters. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [200+ IDs])), consider using an RPC function instead.`)),{error:{message:`${e?.name??`FetchError`}: ${e?.message}`,details:t,hint:n,code:r},data:null,count:null,status:0,statusText:``}})),i.then(e,t)}returns(){return this}overrideTypes(){return this}},te=class extends ee{select(e){let t=!1,n=(e??`*`).split(``).map(e=>/\s/.test(e)&&!t?``:(e===`"`&&(t=!t),e)).join(``);return this.url.searchParams.set(`select`,n),this.headers.append(`Prefer`,`return=representation`),this}order(e,{ascending:t=!0,nullsFirst:n,foreignTable:r,referencedTable:i=r}={}){let a=i?`${i}.order`:`order`,o=this.url.searchParams.get(a);return this.url.searchParams.set(a,`${o?`${o},`:``}${e}.${t?`asc`:`desc`}${n===void 0?``:n?`.nullsfirst`:`.nullslast`}`),this}limit(e,{foreignTable:t,referencedTable:n=t}={}){let r=n===void 0?`limit`:`${n}.limit`;return this.url.searchParams.set(r,`${e}`),this}range(e,t,{foreignTable:n,referencedTable:r=n}={}){let i=r===void 0?`offset`:`${r}.offset`,a=r===void 0?`limit`:`${r}.limit`;return this.url.searchParams.set(i,`${e}`),this.url.searchParams.set(a,`${t-e+1}`),this}abortSignal(e){return this.signal=e,this}single(){return this.headers.set(`Accept`,`application/vnd.pgrst.object+json`),this}maybeSingle(){return this.method===`GET`?this.headers.set(`Accept`,`application/json`):this.headers.set(`Accept`,`application/vnd.pgrst.object+json`),this.isMaybeSingle=!0,this}csv(){return this.headers.set(`Accept`,`text/csv`),this}geojson(){return this.headers.set(`Accept`,`application/geo+json`),this}explain({analyze:e=!1,verbose:t=!1,settings:n=!1,buffers:r=!1,wal:i=!1,format:a=`text`}={}){let o=[e?`analyze`:null,t?`verbose`:null,n?`settings`:null,r?`buffers`:null,i?`wal`:null].filter(Boolean).join(`|`),s=this.headers.get(`Accept`)??`application/json`;return this.headers.set(`Accept`,`application/vnd.pgrst.plan+${a}; for="${s}"; options=${o};`),this}rollback(){return this.headers.append(`Prefer`,`tx=rollback`),this}returns(){return this}maxAffected(e){return this.headers.append(`Prefer`,`handling=strict`),this.headers.append(`Prefer`,`max-affected=${e}`),this}},ne=RegExp(`[,()]`),re=class extends te{eq(e,t){return this.url.searchParams.append(e,`eq.${t}`),this}neq(e,t){return this.url.searchParams.append(e,`neq.${t}`),this}gt(e,t){return this.url.searchParams.append(e,`gt.${t}`),this}gte(e,t){return this.url.searchParams.append(e,`gte.${t}`),this}lt(e,t){return this.url.searchParams.append(e,`lt.${t}`),this}lte(e,t){return this.url.searchParams.append(e,`lte.${t}`),this}like(e,t){return this.url.searchParams.append(e,`like.${t}`),this}likeAllOf(e,t){return this.url.searchParams.append(e,`like(all).{${t.join(`,`)}}`),this}likeAnyOf(e,t){return this.url.searchParams.append(e,`like(any).{${t.join(`,`)}}`),this}ilike(e,t){return this.url.searchParams.append(e,`ilike.${t}`),this}ilikeAllOf(e,t){return this.url.searchParams.append(e,`ilike(all).{${t.join(`,`)}}`),this}ilikeAnyOf(e,t){return this.url.searchParams.append(e,`ilike(any).{${t.join(`,`)}}`),this}regexMatch(e,t){return this.url.searchParams.append(e,`match.${t}`),this}regexIMatch(e,t){return this.url.searchParams.append(e,`imatch.${t}`),this}is(e,t){return this.url.searchParams.append(e,`is.${t}`),this}isDistinct(e,t){return this.url.searchParams.append(e,`isdistinct.${t}`),this}in(e,t){let n=Array.from(new Set(t)).map(e=>typeof e==`string`&&ne.test(e)?`"${e}"`:`${e}`).join(`,`);return this.url.searchParams.append(e,`in.(${n})`),this}notIn(e,t){let n=Array.from(new Set(t)).map(e=>typeof e==`string`&&ne.test(e)?`"${e}"`:`${e}`).join(`,`);return this.url.searchParams.append(e,`not.in.(${n})`),this}contains(e,t){return typeof t==`string`?this.url.searchParams.append(e,`cs.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cs.{${t.join(`,`)}}`):this.url.searchParams.append(e,`cs.${JSON.stringify(t)}`),this}containedBy(e,t){return typeof t==`string`?this.url.searchParams.append(e,`cd.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cd.{${t.join(`,`)}}`):this.url.searchParams.append(e,`cd.${JSON.stringify(t)}`),this}rangeGt(e,t){return this.url.searchParams.append(e,`sr.${t}`),this}rangeGte(e,t){return this.url.searchParams.append(e,`nxl.${t}`),this}rangeLt(e,t){return this.url.searchParams.append(e,`sl.${t}`),this}rangeLte(e,t){return this.url.searchParams.append(e,`nxr.${t}`),this}rangeAdjacent(e,t){return this.url.searchParams.append(e,`adj.${t}`),this}overlaps(e,t){return typeof t==`string`?this.url.searchParams.append(e,`ov.${t}`):this.url.searchParams.append(e,`ov.{${t.join(`,`)}}`),this}textSearch(e,t,{config:n,type:r}={}){let i=``;r===`plain`?i=`pl`:r===`phrase`?i=`ph`:r===`websearch`&&(i=`w`);let a=n===void 0?``:`(${n})`;return this.url.searchParams.append(e,`${i}fts${a}.${t}`),this}match(e){return Object.entries(e).forEach(([e,t])=>{this.url.searchParams.append(e,`eq.${t}`)}),this}not(e,t,n){return this.url.searchParams.append(e,`not.${t}.${n}`),this}or(e,{foreignTable:t,referencedTable:n=t}={}){let r=n?`${n}.or`:`or`;return this.url.searchParams.append(r,`(${e})`),this}filter(e,t,n){return this.url.searchParams.append(e,`${t}.${n}`),this}},ie=class{constructor(e,{headers:t={},schema:n,fetch:r,urlLengthLimit:i=8e3}){this.url=e,this.headers=new Headers(t),this.schema=n,this.fetch=r,this.urlLengthLimit=i}cloneRequestState(){return{url:new URL(this.url.toString()),headers:new Headers(this.headers)}}select(e,t){let{head:n=!1,count:r}=t??{},i=n?`HEAD`:`GET`,a=!1,o=(e??`*`).split(``).map(e=>/\s/.test(e)&&!a?``:(e===`"`&&(a=!a),e)).join(``),{url:s,headers:c}=this.cloneRequestState();return s.searchParams.set(`select`,o),r&&c.append(`Prefer`,`count=${r}`),new re({method:i,url:s,headers:c,schema:this.schema,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}insert(e,{count:t,defaultToNull:n=!0}={}){let{url:r,headers:i}=this.cloneRequestState();if(t&&i.append(`Prefer`,`count=${t}`),n||i.append(`Prefer`,`missing=default`),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);r.searchParams.set(`columns`,e.join(`,`))}}return new re({method:`POST`,url:r,headers:i,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}upsert(e,{onConflict:t,ignoreDuplicates:n=!1,count:r,defaultToNull:i=!0}={}){let{url:a,headers:o}=this.cloneRequestState();if(o.append(`Prefer`,`resolution=${n?`ignore`:`merge`}-duplicates`),t!==void 0&&a.searchParams.set(`on_conflict`,t),r&&o.append(`Prefer`,`count=${r}`),i||o.append(`Prefer`,`missing=default`),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);a.searchParams.set(`columns`,e.join(`,`))}}return new re({method:`POST`,url:a,headers:o,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}update(e,{count:t}={}){let{url:n,headers:r}=this.cloneRequestState();return t&&r.append(`Prefer`,`count=${t}`),new re({method:`PATCH`,url:n,headers:r,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}delete({count:e}={}){let{url:t,headers:n}=this.cloneRequestState();return e&&n.append(`Prefer`,`count=${e}`),new re({method:`DELETE`,url:t,headers:n,schema:this.schema,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}};function ae(e){"@babel/helpers - typeof";return ae=typeof Symbol==`function`&&typeof Symbol.iterator==`symbol`?function(e){return typeof e}:function(e){return e&&typeof Symbol==`function`&&e.constructor===Symbol&&e!==Symbol.prototype?`symbol`:typeof e},ae(e)}function A(e,t){if(ae(e)!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(ae(r)!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function j(e){var t=A(e,`string`);return ae(t)==`symbol`?t:t+``}function oe(e,t,n){return(t=j(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function se(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ce(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?se(Object(n),!0).forEach(function(t){oe(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):se(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}var le=class e{constructor(e,{headers:t={},schema:n,fetch:r,timeout:i,urlLengthLimit:a=8e3}={}){this.url=e,this.headers=new Headers(t),this.schemaName=n,this.urlLengthLimit=a;let o=r??globalThis.fetch;i!==void 0&&i>0?this.fetch=(e,t)=>{let n=new AbortController,r=setTimeout(()=>n.abort(),i),a=t?.signal;if(a){if(a.aborted)return clearTimeout(r),o(e,t);let i=()=>{clearTimeout(r),n.abort()};return a.addEventListener(`abort`,i,{once:!0}),o(e,ce(ce({},t),{},{signal:n.signal})).finally(()=>{clearTimeout(r),a.removeEventListener(`abort`,i)})}return o(e,ce(ce({},t),{},{signal:n.signal})).finally(()=>clearTimeout(r))}:this.fetch=o}from(e){if(!e||typeof e!=`string`||e.trim()===``)throw Error(`Invalid relation name: relation must be a non-empty string.`);return new ie(new URL(`${this.url}/${e}`),{headers:new Headers(this.headers),schema:this.schemaName,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}schema(t){return new e(this.url,{headers:this.headers,schema:t,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}rpc(e,t={},{head:n=!1,get:r=!1,count:i}={}){let a,o=new URL(`${this.url}/rpc/${e}`),s,c=e=>typeof e==`object`&&!!e&&(!Array.isArray(e)||e.some(c)),l=n&&Object.values(t).some(c);l?(a=`POST`,s=t):n||r?(a=n?`HEAD`:`GET`,Object.entries(t).filter(([e,t])=>t!==void 0).map(([e,t])=>[e,Array.isArray(t)?`{${t.join(`,`)}}`:`${t}`]).forEach(([e,t])=>{o.searchParams.append(e,t)})):(a=`POST`,s=t);let u=new Headers(this.headers);return l?u.set(`Prefer`,i?`count=${i},return=minimal`:`return=minimal`):i&&u.set(`Prefer`,`count=${i}`),new re({method:a,url:o,headers:u,schema:this.schemaName,body:s,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}},ue=class{constructor(){}static detectEnvironment(){if(typeof WebSocket<`u`)return{type:`native`,constructor:WebSocket};if(typeof globalThis<`u`&&globalThis.WebSocket!==void 0)return{type:`native`,constructor:globalThis.WebSocket};if(typeof global<`u`&&global.WebSocket!==void 0)return{type:`native`,constructor:global.WebSocket};if(typeof globalThis<`u`&&globalThis.WebSocketPair!==void 0&&globalThis.WebSocket===void 0)return{type:`cloudflare`,error:`Cloudflare Workers detected. WebSocket clients are not supported in Cloudflare Workers.`,workaround:`Use Cloudflare Workers WebSocket API for server-side WebSocket handling, or deploy to a different runtime.`};if(typeof globalThis<`u`&&globalThis.EdgeRuntime||typeof navigator<`u`&&navigator.userAgent?.includes(`Vercel-Edge`))return{type:`unsupported`,error:`Edge runtime detected (Vercel Edge/Netlify Edge). WebSockets are not supported in edge functions.`,workaround:`Use serverless functions or a different deployment target for WebSocket functionality.`};let e=globalThis.process;if(e){let t=e.versions;if(t&&t.node){let e=t.node,n=parseInt(e.replace(/^v/,``).split(`.`)[0]);return n>=22?globalThis.WebSocket===void 0?{type:`unsupported`,error:`Node.js ${n} detected but native WebSocket not found.`,workaround:`Provide a WebSocket implementation via the transport option.`}:{type:`native`,constructor:globalThis.WebSocket}:{type:`unsupported`,error:`Node.js ${n} detected without native WebSocket support.`,workaround:`For Node.js < 22, install "ws" package and provide it via the transport option:
+Show that you have mastered all input types and calculations!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_string_var`,description:`Declare a string variable for product name`,test:e=>/var\s+\w+\s+string/.test(e)},{id:`req_float_vars`,description:`Declare at least two float64 variables (price and discount)`,test:e=>(e.match(/var\s+\w+\s+float64/g)||[]).length>=2},{id:`req_scans`,description:`Use fmt.Scan at least 3 times`,test:e=>(e.match(/fmt\.Scan\(/g)||[]).length>=3},{id:`req_ampersands`,description:`Use the & 'Save Symbol' for every Scan`,test:e=>(e.match(/fmt\.Scan\(\s*&/g)||[]).length>=3},{id:`req_calculation`,description:`Calculate discount (original * discount / 100) or final price`,test:e=>/\w+\s*\*\s*\w+\s*\/\s*100/.test(e)||/\w+\s*-\s*\w+/.test(e)},{id:`req_print`,description:`Print the result with fmt.Printf or fmt.Println`,test:e=>/fmt\.Printf/.test(e)||/fmt\.Println/.test(e)},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`Perfect! You have mastered user input with fmt.Scan! You can handle strings, integers, and floats, and perform calculations with them. Ready for the next challenge! 🎯✨`}],conceptSummary:{title:`User Input Practice Essentials`,points:[`**Always use & in fmt.Scan** - fmt.Scan(&variable) is required to save input`,`**Match variable types** - string for text, int for whole numbers, float64 for decimals`,`**Convert types when needed** - Use float64(intVariable) to convert int to float64 for calculations`,`**Calculate after scanning** - You must scan values before you can use them in calculations`,`**Format output with Printf** - Use %.2f for 2 decimal places on floats`,`**Order matters** - Declare variables, ask questions, scan input, then calculate and print`,`**Test your code** - Run and enter sample data to verify your program works correctly`]}},{id:28,lesson:{pigin:`
+ ## **🎯 Lesson: fmt.Scan Summary**
+
+### **What You Learned**
+
+| Concept | Simple Explanation |
+|---------|-------------------|
+| \`fmt.Scan(&variable)\` | The "Inbox"—waits for user to type something and press Enter |
+| \`&\` (Save Symbol) | Mandatory symbol you put before variable name so \`fmt.Scan\` can save the data inside. *We go learn how e really works for Pointers lesson later* |
+| **Scanning Different Types** | \`fmt.Scan\` automatically converts input to match your variable type—string, int, or float64 |
+
+---
+
+## **The Pattern You Must Follow**
+
+\`\`\`go
+// 1. Declare empty variable
+var heroName string
+
+// 2. Ask the user
+fmt.Print("Enter hero name: ")
+
+// 3. Scan and save (REMEMBER THE &!)
+fmt.Scan(&heroName)
+
+// 4. Use the data
+fmt.Println("Welcome,", heroName)
+\`\`\`
+
+---
+
+## **Key Rules**
+
+1. **Always put \`&\` before the variable in \`fmt.Scan\`**
+2. **Ask first with \`fmt.Print\`, then scan with \`fmt.Scan\`**
+3. \`fmt.Scan\` **only catches one word** (stops at space)
+4. **Declare variable before scanning into am**
+
+---
+
+## **What You Can Do Now**
+
+✅ Collect user input (strings, integers, floats)  
+✅ Do math on scanned numbers  
+✅ Build interactive programs with multiple questions  
+✅ Create formatted output with \`fmt.Printf\`
+
+**Status:** ✅ **LESSON COMPLETE** — You fit now write interactive Go programs!`,eng:`
+ ## **🎯 Lesson: fmt.Scan Summary**
+
+### **What You Learned**
+
+| Concept | Simple Explanation |
+|---------|-------------------|
+| \`fmt.Scan(&variable)\` | The "Inbox"—waits for user to type something and press Enter |
+| \`&\` (Save Symbol) | Mandatory symbol you put before variable name so \`fmt.Scan\` can save the data inside. *We will learn how it really works in the Pointers lesson later* |
+| **Scanning Different Types** | \`fmt.Scan\` automatically converts input to match your variable type—string, int, or float64 |
+
+---
+
+## **The Pattern You Must Follow**
+
+\`\`\`go
+// 1. Declare empty variable
+var heroName string
+
+// 2. Ask the user
+fmt.Print("Enter hero name: ")
+
+// 3. Scan and save (REMEMBER THE &!)
+fmt.Scan(&heroName)
+
+// 4. Use the data
+fmt.Println("Welcome,", heroName)
+\`\`\`
+
+---
+
+## **Key Rules**
+
+1. **Always put \`&\` before the variable in \`fmt.Scan\`**
+2. **Ask first with \`fmt.Print\`, then scan with \`fmt.Scan\`**
+3. \`fmt.Scan\` **only catches one word** (stops at space)
+4. **Declare variable before scanning into it**
+
+---
+
+## **What You Can Do Now**
+
+✅ Collect user input (strings, integers, floats)  
+✅ Do math on scanned numbers  
+✅ Build interactive programs with multiple questions  
+✅ Create formatted output with \`fmt.Printf\`
+
+**Status:** ✅ **LESSON COMPLETE** — You can now write interactive Go programs!`},defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Your code here!
+    
+}`,title:`fmt.Scan 3: fmt.Scan Mastery Quiz`,description:`Test your understanding of fmt.Scan! 10 questions covering the 'Save Symbol', input collection, data types, and best practices. Become a certified Input Master!`,learningSteps:[{id:1,heading:`📚 Question 1: Purpose of fmt.Scan`,text:`**Question 1:** What is the main purpose of \`fmt.Scan\`?
+
+- A) To print text to the screen
+- B) To collect input from the user ✅
+- C) To declare variables
+- D) To do math calculations`,challengeType:`quiz`,question:`What is the main purpose of fmt.Scan?`,options:[`To print text to the screen`,`To collect input from the user`,`To declare variables`,`To do math calculations`],correctAnswerIndex:1,explanation:`Correct! fmt.Scan collects input from the user and saves it into a variable. It's like an Inbox for your program!`},{id:2,heading:`📚 Question 2: The Save Symbol`,text:"**Question 2:** Which symbol MUST you put before the variable name inside `fmt.Scan`?\n\n- A) `*`\n- B) `$`\n- C) `&` ✅\n- D) `#`",challengeType:`quiz`,question:`Which symbol MUST you put before the variable name inside fmt.Scan?`,options:[`*`,`$`,`&`,`#`],correctAnswerIndex:2,explanation:`Correct! The & 'Save Symbol' tells fmt.Scan WHERE to save the input. Without it, the input goes nowhere! Example: fmt.Scan(&name)`},{id:3,heading:`📚 Question 3: Missing & Symbol`,text:`**Question 3:** What happens if you forget to put \`&\` before the variable in \`fmt.Scan\`?
+
+- A) The program crashes
+- B) The input saves correctly
+- C) The input does NOT save into the variable ✅
+- D) The program prints an error message`,challengeType:`quiz`,question:`What happens if you forget to put & before the variable in fmt.Scan?`,options:[`The program crashes`,`The input saves correctly`,`The input does NOT save into the variable`,`The program prints an error message`],correctAnswerIndex:2,explanation:`Correct! Without &, the input doesn't save into your variable. The variable stays empty or keeps its old value. Always use &!`},{id:4,heading:`📚 Question 4: Asking for Input`,text:"**Question 4:** What should you use FIRST before `fmt.Scan` to ask the user for input?\n\n- A) `fmt.Println`\n- B) `fmt.Scanln`\n- C) `fmt.Print` or `fmt.Println` ✅\n- D) Nothing—`fmt.Scan` asks automatically",challengeType:`quiz`,question:`What should you use FIRST before fmt.Scan to ask the user for input?`,options:[`fmt.Println`,`fmt.Scanln`,`fmt.Print or fmt.Println`,`Nothing—fmt.Scan asks automatically`],correctAnswerIndex:2,explanation:`Correct! Always use fmt.Print or fmt.Println FIRST to ask the question. fmt.Scan doesn't show any message—it just waits for input silently!`},{id:5,heading:`📚 Question 5: Scanning Integers`,text:`**Question 5:** If you declare \`var age int\`, what will \`fmt.Scan(&age)\` do if the user types "25"?
+
+- A) Save it as text "25"
+- B) Save it as integer 25 ✅
+- C) Cause an error
+- D) Save it as float 25.0`,challengeType:`quiz`,question:`What will fmt.Scan(&age) do if the user types '25' into an int variable?`,options:[`Save it as text '25'`,`Save it as integer 25`,`Cause an error`,`Save it as float 25.0`],correctAnswerIndex:1,explanation:`Correct! fmt.Scan automatically converts the input to match your variable type. '25' becomes integer 25 when saved to an int variable!`},{id:6,heading:`📚 Question 6: fmt.Scan Analogy`,text:`**Question 6:** What is \`fmt.Scan\` compared to?
+
+- A) The messenger sending text OUT
+- B) The Inbox collecting text IN ✅
+- C) The calculator doing math
+- D) The printer making copies`,challengeType:`quiz`,question:`What is fmt.Scan compared to?`,options:[`The messenger sending text OUT`,`The Inbox collecting text IN`,`The calculator doing math`,`The printer making copies`],correctAnswerIndex:1,explanation:`Correct! fmt.Scan is like an Inbox—it collects input coming IN to your program. fmt.Println is the Outbox—sending text OUT!`},{id:7,heading:`📚 Question 7: Data Types`,text:"**Question 7:** Which data type can `fmt.Scan` NOT directly collect?\n\n- A) `string`\n- B) `int`\n- C) `float64`\n- D) `fmt.Scan` can collect all of these ✅",challengeType:`quiz`,question:`Which data type can fmt.Scan NOT directly collect?`,options:[`string`,`int`,`float64`,`fmt.Scan can collect all of these`],correctAnswerIndex:3,explanation:`Correct! fmt.Scan can collect string, int, float64, and more! It automatically converts the input to match your variable's type. Very powerful!`},{id:8,heading:`📚 Question 8: Spaces in Input`,text:`**Question 8:** What happens if you use \`fmt.Scan\` to collect a sentence like "Hello World"?
+
+- A) It saves "Hello World" completely
+- B) It only saves "Hello" (stops at space) ✅
+- C) It causes an error
+- D) It saves "World" only`,challengeType:`quiz`,question:`What happens if you use fmt.Scan to collect a sentence like 'Hello World'?`,options:[`It saves 'Hello World' completely`,`It only saves 'Hello' (stops at space)`,`It causes an error`,`It saves 'World' only`],correctAnswerIndex:1,explanation:`Correct! fmt.Scan stops at spaces! 'Hello World' becomes just 'Hello'. For full sentences with spaces, we use fmt.Scanln (coming later)!`},{id:9,heading:`📚 Question 9: Correct Order`,text:`**Question 9:** In which order should you write these lines?
+
+\`\`\`
+fmt.Scan(&name)
+var name string
+fmt.Print("Enter name: ")
+\`\`\`
+
+- A) 2, 3, 1 ✅
+- B) 1, 2, 3
+- C) 3, 2, 1
+- D) 2, 1, 3`,challengeType:`quiz`,question:`In which order should you write these lines?`,options:[`2, 3, 1 (var, Print, Scan)`,`1, 2, 3 (Scan, var, Print)`,`3, 2, 1 (Print, var, Scan)`,`2, 1, 3 (var, Scan, Print)`],correctAnswerIndex:0,explanation:`Correct! First: var name string (declare), Second: fmt.Print (ask), Third: fmt.Scan(&name) (collect). Declare → Ask → Scan!`},{id:10,heading:`📚 Question 10: Future Learning`,text:`**Question 10:** When will we learn how the \`&\` symbol really works "under the hood"?
+
+- A) In the next lesson
+- B) In the Pointers lesson (future) ✅
+- C) Never—we already know everything
+- D) In the Loops lesson`,challengeType:`quiz`,question:`When will we learn how the & symbol really works 'under the hood'?`,options:[`In the next lesson`,`In the Pointers lesson (future)`,`Never—we already know everything`,`In the Loops lesson`],correctAnswerIndex:1,explanation:`Correct! The & symbol is related to 'Pointers'—a more advanced topic. For now, just remember: & tells fmt.Scan WHERE to save the input. We'll learn the deep magic later!`}],gameTasks:[{id:1,description:`🏆 Final Challenge: Input Master Certification`,details:`Write a complete program that proves you are an Input Master:
+
+1. Declare username as string
+2. Declare age as int  
+3. Declare score as float64
+4. Use fmt.Print to ask for username: "Enter username: "
+5. Use fmt.Scan(&username) to collect it
+6. Use fmt.Print to ask for age: "Enter age: "
+7. Use fmt.Scan(&age) to collect it
+8. Use fmt.Print to ask for score: "Enter score: "
+9. Use fmt.Scan(&score) to collect it
+10. Use fmt.Printf to print a summary:
+    - Username: %s
+    - Age: %d
+    - Score: %.2f
+
+Show that you have mastered fmt.Scan with all three data types!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_username_var`,description:`Declare username as string`,test:e=>/var\s+username\s+string/.test(e)||/username\s*:=\s*""/.test(e)},{id:`req_age_var`,description:`Declare age as int`,test:e=>/var\s+age\s+int/.test(e)||/age\s*:=\s*0/.test(e)},{id:`req_score_var`,description:`Declare score as float64`,test:e=>/var\s+score\s+float64/.test(e)||/score\s*:=\s*0\.0/.test(e)||/score\s*:=\s*0\.0/.test(e)},{id:`req_username_ask`,description:`Use fmt.Print to ask for username`,test:e=>/fmt\.Print\(\s*".*username.*"\s*\)/i.test(e)},{id:`req_username_scan`,description:`Use fmt.Scan(&username) with & symbol`,test:e=>/fmt\.Scan\(\s*&username\s*\)/.test(e)},{id:`req_age_ask`,description:`Use fmt.Print to ask for age`,test:e=>/fmt\.Print\(\s*".*age.*"\s*\)/i.test(e)},{id:`req_age_scan`,description:`Use fmt.Scan(&age) with & symbol`,test:e=>/fmt\.Scan\(\s*&age\s*\)/.test(e)},{id:`req_score_ask`,description:`Use fmt.Print to ask for score`,test:e=>/fmt\.Print\(\s*".*score.*"\s*\)/i.test(e)},{id:`req_score_scan`,description:`Use fmt.Scan(&score) with & symbol`,test:e=>/fmt\.Scan\(\s*&score\s*\)/.test(e)},{id:`req_printf`,description:`Use fmt.Printf with %s, %d, and %.2f format specifiers`,test:e=>{let t=/fmt\.Printf/.test(e),n=/%s/.test(e),r=/%d/.test(e),i=/%.2f/.test(e)||/%f/.test(e);return t&&n&&r&&i}},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`🎓🏆 CERTIFIED INPUT MASTER! 🎯 You have mastered fmt.Scan with string, int, and float64! The & 'Save Symbol' is your friend, and you know exactly how to collect user input. Ready for the next challenge! 🚀✨`}],conceptSummary:{title:`fmt.Scan Mastery Summary`,points:[`**fmt.Scan collects input** - It's the Inbox for your program`,`**Always use &** - The 'Save Symbol' tells fmt.Scan WHERE to save input`,`**Declare first** - Create the variable before scanning into it`,`**Ask before scanning** - Use fmt.Print to ask, then fmt.Scan to collect`,`**fmt.Scan stops at spaces** - For sentences, use fmt.Scanln (later)`,`**Automatic type conversion** - fmt.Scan converts '25' to 25 for int variables`,`**Three data types** - string, int, float64 all work with fmt.Scan`,`**Order: Declare → Ask → Scan → Use** - Never forget this flow!`]}}]},{title:`Subject 6: String Manipulation`,missions:[{id:29,lesson:{pigin:`
+ ## 🔴 CONCEPT 1: Show Your Particulars (Type Checking with \`%T\`)
+
+### The Explanation (Broken Down Well Well)
+
+**Wetin be Type Checking for Go?**
+
+For Go, every variable get **identity** - just like every Nigerian get identity. Your variable fit be:
+- \`int\` (whole number like 1, 2, 50, 1000)
+- \`float64\` (decimal number like 50.5, 3.14, 99.99)
+- \`string\` (text like "Jollof", "Lagos", "Naija")
+- \`bool\` (true or false, like "yes" or "no")
+
+**But how you go know which identity your variable get?**
+
+Na here \`fmt.Printf("%T")\` enter! 
+
+Think am like this: You dey waka for Lagos road, Police stop you for checkpoint. Dem go shout: *"Oga, show your particulars! Who you be?"* You go bring out your ID card show dem whether you be Citizen, Driver, or Passenger.
+
+For Go, \`%T\` na that same question! When you use \`fmt.Printf("%T", yourVariable)\`, you dey ask Go: *"Wetin be the true identity of this variable?"* And Go go answer you sharp-sharp!
+
+**Why e dey important?**
+- Sometimes you forget wetin type you give variable
+- Sometimes Go guess the type for you (type inference), and you wan confirm
+- When error show face, you need know the type to fix am
+
+**The Format:**
+\`\`\`go
+fmt.Printf("%T", variableName)  // This go print the type
+\`\`\`
+
+Or with better sentence:
+\`\`\`go
+fmt.Printf("This variable na %T type\\n", variableName)
+\`\`\`
+
+---
+
+### The Example (Clear Go Code)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    // We create different variables
+    food := "Amala"           // Go guess say na string
+    quantity := 5             // Go guess say na int
+    price := 250.50           // Go guess say na float64
+    isDelicious := true       // Go guess say na bool
+    
+    // Police checkpoint! Show your particulars!
+    fmt.Printf("food na %T type\\n", food)           // Output: food na string type
+    fmt.Printf("quantity na %T type\\n", quantity)   // Output: quantity na int type
+    fmt.Printf("price na %T type\\n", price)         // Output: price na float64 type
+    fmt.Printf("isDelicious na %T type\\n", isDelicious) // Output: isDelicious na bool type
+}
+\`\`\`
+
+---`,eng:`
+ ## 🔴 CONCEPT 1: Show Your Particulars (Type Checking with \`%T\`)
+
+### The Explanation (Broken Down Very Well)
+
+**What is Type Checking in Go?**
+
+In Go, every variable has an **identity** - just like every Nigerian has an identity. Your variable can be:
+- \`int\` (whole number like 1, 2, 50, 1000)
+- \`float64\` (decimal number like 50.5, 3.14, 99.99)
+- \`string\` (text like "Jollof", "Lagos", "Naija")
+- \`bool\` (true or false, like "yes" or "no")
+
+**But how will you know which identity your variable has?**
+
+This is where \`fmt.Printf("%T")\` comes in! 
+
+Think of it like this: You are walking on a Lagos road, Police stop you at a checkpoint. They will shout: *"Oga, show your particulars! Who are you?"* You will bring out your ID card to show them whether you are a Citizen, Driver, or Passenger.
+
+In Go, \`%T\` is that same question! When you use \`fmt.Printf("%T", yourVariable)\`, you are asking Go: *"What is the true identity of this variable?"* And Go will answer you sharp-sharp!
+
+**Why is it important?**
+- Sometimes you forget what type you gave a variable
+- Sometimes Go guesses the type for you (type inference), and you want to confirm
+- When an error shows its face, you need to know the type to fix it
+
+**The Format:**
+\`\`\`go
+fmt.Printf("%T", variableName)  // This will print the type
+\`\`\`
+
+Or with a better sentence:
+\`\`\`go
+fmt.Printf("This variable is %T type\\n", variableName)
+\`\`\`
+
+---
+
+### The Example (Clear Go Code)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    // We create different variables
+    food := "Amala"           // Go guesses it is string
+    quantity := 5             // Go guesses it is int
+    price := 250.50           // Go guesses it is float64
+    isDelicious := true       // Go guesses it is bool
+    
+    // Police checkpoint! Show your particulars!
+    fmt.Printf("food is %T type\\n", food)           // Output: food is string type
+    fmt.Printf("quantity is %T type\\n", quantity)   // Output: quantity is int type
+    fmt.Printf("price is %T type\\n", price)         // Output: price is float64 type
+    fmt.Printf("isDelicious is %T type\\n", isDelicious) // Output: isDelicious is bool type
+}
+\`\`\`
+
+---`},defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Your code here!
+    
+}`,title:`Mission 22: Type Discovery with %T`,description:`Master the %T format verb in fmt.Printf to discover and confirm variable types. Learn to identify float64, string, int, and bool types in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Discover float64`,text:"**Task 1:** Create variable `amount := 50.5` and use `fmt.Printf` with `%T` to show what type `amount` is. Print it like this: `The type of amount is: [type here]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Create amount variable with value 50.5
+    
+    
+    // Use fmt.Printf with %T to show the type
+    
+}`,codeTaskDescription:`Create amount variable and use fmt.Printf with %T to display its type`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/amount\s*:=\s*50\.5/.test(e)||/var\s+amount\s*=\s*50\.5/.test(e),a=/fmt\.Printf\(\s*".*%T.*"\s*,\s*amount\s*\)/.test(e),o=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o},hints:[`amount := 50.5`,`fmt.Printf("The type of amount is: %T\\n", amount)`,`%T shows the type of the variable`,`Output should be: The type of amount is: float64`]},{id:2,heading:`🔍 Task 2: Confirm string`,text:'**Task 2:** Create variable `city := "Lagos"` and use `fmt.Printf` with `%T` to confirm that `city` is string type.',challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Create city variable with value "Lagos"
+    
+    
+    // Use fmt.Printf with %T to confirm it's a string
+    
+}`,codeTaskDescription:`Create city variable and use fmt.Printf with %T to confirm string type`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/city\s*:=\s*"Lagos"/.test(e)||/var\s+city\s*=\s*"Lagos"/.test(e),a=/fmt\.Printf\(\s*".*%T.*"\s*,\s*city\s*\)/.test(e),o=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o},hints:[`city := "Lagos"`,`fmt.Printf("The type of city is: %T\\n", city)`,`%T will show 'string'`,`Lagos is a string (text in quotes)`]},{id:3,heading:`🔍 Task 3: Confirm int`,text:"**Task 3:** Create variable `population := 15000000` and use `fmt.Printf` with `%T` to confirm that `population` is int type.",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Create population variable with value 15000000
+    
+    
+    // Use fmt.Printf with %T to confirm it's an int
+    
+}`,codeTaskDescription:`Create population variable and use fmt.Printf with %T to confirm int type`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/population\s*:=\s*15000000/.test(e)||/var\s+population\s*=\s*15000000/.test(e),a=/fmt\.Printf\(\s*".*%T.*"\s*,\s*population\s*\)/.test(e),o=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o},hints:[`population := 15000000`,`fmt.Printf("The type of population is: %T\\n", population)`,`%T will show 'int'`,`15000000 is a whole number (integer)`]},{id:4,heading:`🔍 Task 4: Confirm float64`,text:"**Task 4:** Create variable `temperature := 33.5` and use `fmt.Printf` with `%T` to confirm that `temperature` is float64 type.",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Create temperature variable with value 33.5
+    
+    
+    // Use fmt.Printf with %T to confirm it's a float64
+    
+}`,codeTaskDescription:`Create temperature variable and use fmt.Printf with %T to confirm float64 type`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/temperature\s*:=\s*33\.5/.test(e)||/var\s+temperature\s*=\s*33\.5/.test(e),a=/fmt\.Printf\(\s*".*%T.*"\s*,\s*temperature\s*\)/.test(e),o=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o},hints:[`temperature := 33.5`,`fmt.Printf("The type of temperature is: %T\\n", temperature)`,`%T will show 'float64'`,`33.5 has a decimal point, so it's float64`]},{id:5,heading:`🔍 Task 5: Confirm bool`,text:"**Task 5:** Create variable `isRaining := false` and use `fmt.Printf` with `%T` to confirm that `isRaining` is bool type.",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Create isRaining variable with value false
+    
+    
+    // Use fmt.Printf with %T to confirm it's a bool
+    
+}`,codeTaskDescription:`Create isRaining variable and use fmt.Printf with %T to confirm bool type`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/isRaining\s*:=\s*false/.test(e)||/var\s+isRaining\s*=\s*false/.test(e),a=/fmt\.Printf\(\s*".*%T.*"\s*,\s*isRaining\s*\)/.test(e),o=/\}\s*$/.test(e);return t&&n&&r&&i&&a&&o},hints:[`isRaining := false`,`fmt.Printf("The type of isRaining is: %T\\n", isRaining)`,`%T will show 'bool'`,`false (or true) is a boolean value`]}],gameTasks:[{id:1,description:`🏆 Final Challenge: Type Detective`,details:`Write a complete program from scratch that:
+
+1. Declares distance (float64) = 42.5
+2. Declares cityName (string) = "Ibadan"
+3. Declares passengers (int) = 18
+4. Declares isFull (bool) = false
+5. Uses fmt.Printf with %T to print all four types
+6. Format: "distance is type [type], cityName is type [type], etc."
+
+Show that you can discover any variable type using %T!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_distance`,description:`Declare distance as float64 with value 42.5`,test:e=>/distance\s*:=\s*42\.5/.test(e)||/var\s+distance\s*=\s*42\.5/.test(e)},{id:`req_city_name`,description:`Declare cityName as string with value 'Ibadan'`,test:e=>/cityName\s*:=\s*"Ibadan"/.test(e)||/var\s+cityName\s*=\s*"Ibadan"/.test(e)},{id:`req_passengers`,description:`Declare passengers as int with value 18`,test:e=>/passengers\s*:=\s*18/.test(e)||/var\s+passengers\s*=\s*18/.test(e)},{id:`req_is_full`,description:`Declare isFull as bool with value false`,test:e=>/isFull\s*:=\s*false/.test(e)||/var\s+isFull\s*=\s*false/.test(e)},{id:`req_distance_type`,description:`Use fmt.Printf with %T for distance`,test:e=>/fmt\.Printf\(\s*".*%T.*"\s*,\s*distance\s*\)/.test(e)},{id:`req_city_type`,description:`Use fmt.Printf with %T for cityName`,test:e=>/fmt\.Printf\(\s*".*%T.*"\s*,\s*cityName\s*\)/.test(e)},{id:`req_passengers_type`,description:`Use fmt.Printf with %T for passengers`,test:e=>/fmt\.Printf\(\s*".*%T.*"\s*,\s*passengers\s*\)/.test(e)},{id:`req_is_full_type`,description:`Use fmt.Printf with %T for isFull`,test:e=>/fmt\.Printf\(\s*".*%T.*"\s*,\s*isFull\s*\)/.test(e)},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`🕵️🏆 CERTIFIED TYPE DETECTIVE! 🔍 You have mastered the %T format verb! You can now discover any variable's type in Go. Whether it's float64, string, int, or bool—nothing escapes your detection! 🎯✨`}],conceptSummary:{title:`Type Discovery with %T Essentials`,points:[`**%T shows the type** - fmt.Printf with %T reveals what type a variable is`,`**float64** - Numbers with decimal points (50.5, 33.5)`,`**string** - Text in double quotes ('Lagos', 'Ibadan')`,`**int** - Whole numbers without decimals (15000000, 18)`,`**bool** - true or false values`,`**fmt.Printf format** - 'Variable %s is type %T\\n', name, name`,`**Useful for debugging** - When you're not sure what type Go inferred`,`**Type inference** - Go guesses types when you use := (colon-equals)`]}},{id:30,lesson:{pigin:`
+
+## 🟡 CONCEPT 2: The Tape Rule (\`len()\` with Strings) - CORRECTED VERSION
+
+### The Explanation (Broken Down Well Well)
+
+**Wetin \`len()\` Really Mean for Go?**
+
+Imagine you be **tailor for Lagos Island**. One fine Saturday morning, one customer waka enter your shop with beautiful **Ankara fabric**. The customer say: *"Oga, I want make you sew agbada for me, but e must fit me body well well!"*
+
+Before you start cutting the cloth with your scissors, wetin you go do first? **You go bring your tape rule!** You go measure from shoulder to ankle, from chest to back, from neck to waist. You dey find out **the exact length** wey you need so the cloth no go too short or too long.
+
+For Go programming, \`len()\` function na **that same tape rule**! But instead of measuring cloth or body, \`len()\` dey measure **strings** - how many characters (or bytes) dey inside word or sentence.
+
+**How \`len()\` Work for Inside:**
+
+When you write \`len("Naija")\`, Go go:
+1. Look inside the string \`"Naija"\`
+2. Count every single character: N-a-i-j-a
+3. Return the number: **5**
+
+Things That \`len()\` Can Measure:
+1. ✅ Strings (text) - This na wetin we dey learn now
+2. ✅ Arrays (but you never learn am yet)
+3. ✅ Slices (but you never learn am yet)
+4. ✅ Maps (but you never learn am yet)
+
+Things That \`len()\` CANNOT Measure:
+1. ❌ Numbers (\`int\`, \`float64\`) - Numbers no get "length"!
+2. ❌ Boolean (\`true\`/\`false\`) - True no get length, false no get length!
+
+**Why We Dey Use \`fmt.Scan()\` This Time:**
+
+Before, we dey hardcode the words inside code (like \`food := "Amala"\`). But for real life, **tailor no dey guess your size** - dem dey **ask you first**, then measure! 
+
+\`fmt.Scan(&variable)\` na how Go **ask user for input** from keyboard. The \`&\` symbol mean "save the answer inside this variable address."
+
+**How \`fmt.Scan()\` Work:**
+\`\`\`go
+var name string
+fmt.Print("Enter your name: ")  // Ask the question
+fmt.Scan(&name)                 // Wait for user to type and press Enter
+// Now 'name' variable contain whatever user type!
+\`\`\`
+
+**The Syntax (How to Write Am with \`fmt.Scan()\`):**
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    var word string  // You must use 'var' because you never know wetin user go type
+    
+    fmt.Print("Type something: ")
+    fmt.Scan(&word)  // Go wait here until user type and press Enter
+    
+    length := len(word)
+    fmt.Printf("You type %d characters\\n", length)
+}
+\`\`\`
+
+---
+
+### The Example (Clear Go Code with ONLY What You Sabi)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    // Example 1: Simple measurement with user input
+    var food string
+    
+    fmt.Print("Enter your favorite Nigerian food: ")
+    fmt.Scan(&food)  // Program stop here, wait for you type
+    
+    fmt.Printf("You choose '%s' which get %d characters\\n", food, len(food))
+    
+    // Example 2: Just show the length, no if/else checking
+    var password string
+    
+    fmt.Print("Create password: ")
+    fmt.Scan(&password)
+    
+    // We just print the length, we no dey check if e good or bad
+    fmt.Printf("Your password get %d characters\\n", len(password))
+    
+    // Example 3: Calculate remaining space simple
+    var tweet string
+    maxChars := 280  // This na variable, no be if/else!
+    
+    fmt.Print("Enter your tweet: ")
+    fmt.Scan(&tweet)
+    
+    used := len(tweet)
+    remaining := maxChars - used  // Simple math!
+    
+    fmt.Printf("You used %d characters. Remaining: %d\\n", used, remaining)
+}
+\`\`\``,eng:`
+
+## 🟡 CONCEPT 2: The Tape Rule (\`len()\` with Strings) - CORRECTED VERSION
+
+### The Explanation (Broken Down Very Well)
+
+**What Does \`len()\` Really Mean in Go?**
+
+Imagine you are a **tailor in Lagos Island**. One fine Saturday morning, a customer walks into your shop with beautiful **Ankara fabric**. The customer says: *"Oga, I want you to sew agbada for me, but it must fit my body very well!"*
+
+Before you start cutting the cloth with your scissors, what will you do first? **You will bring your tape rule!** You will measure from shoulder to ankle, from chest to back, from neck to waist. You are finding out **the exact length** that you need so the cloth won't be too short or too long.
+
+In Go programming, the \`len()\` function is **that same tape rule**! But instead of measuring cloth or body, \`len()\` measures **strings** - how many characters (or bytes) are inside a word or sentence.
+
+**How \`len()\` Works Inside:**
+
+When you write \`len("Naija")\`, Go will:
+1. Look inside the string \`"Naija"\`
+2. Count every single character: N-a-i-j-a
+3. Return the number: **5**
+
+Things That \`len()\` Can Measure:
+1. ✅ Strings (text) - This is what we're learning now
+2. ✅ Arrays (but you haven't learned this yet)
+3. ✅ Slices (but you haven't learned this yet)
+4. ✅ Maps (but you haven't learned this yet)
+
+Things That \`len()\` CANNOT Measure:
+1. ❌ Numbers (\`int\`, \`float64\`) - Numbers don't have a "length"!
+2. ❌ Boolean (\`true\`/\`false\`) - True has no length, false has no length!
+
+**Why We Are Using \`fmt.Scan()\` This Time:**
+
+Before, we were hardcoding the words inside code (like \`food := "Amala"\`). But in real life, **a tailor doesn't guess your size** - they **ask you first**, then measure! 
+
+\`fmt.Scan(&variable)\` is how Go **asks the user for input** from the keyboard. The \`&\` symbol means "save the answer inside this variable address."
+
+**How \`fmt.Scan()\` Works:**
+\`\`\`go
+var name string
+fmt.Print("Enter your name: ")  // Ask the question
+fmt.Scan(&name)                 // Wait for user to type and press Enter
+// Now 'name' variable contains whatever the user typed!
+\`\`\`
+
+**The Syntax (How to Write It with \`fmt.Scan()\`):**
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    var word string  // You must use 'var' because you never know what the user will type
+    
+    fmt.Print("Type something: ")
+    fmt.Scan(&word)  // Go waits here until user types and presses Enter
+    
+    length := len(word)
+    fmt.Printf("You typed %d characters\\n", length)
+}
+\`\`\`
+
+---
+
+### The Example (Clear Go Code with ONLY What You Know)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    // Example 1: Simple measurement with user input
+    var food string
+    
+    fmt.Print("Enter your favorite Nigerian food: ")
+    fmt.Scan(&food)  // Program stops here, waits for you to type
+    
+    fmt.Printf("You chose '%s' which has %d characters\\n", food, len(food))
+    
+    // Example 2: Just show the length, no if/else checking
+    var password string
+    
+    fmt.Print("Create password: ")
+    fmt.Scan(&password)
+    
+    // We just print the length, we don't check if it's good or bad
+    fmt.Printf("Your password has %d characters\\n", len(password))
+    
+    // Example 3: Calculate remaining space simply
+    var tweet string
+    maxChars := 280  // This is a variable, not if/else!
+    
+    fmt.Print("Enter your tweet: ")
+    fmt.Scan(&tweet)
+    
+    used := len(tweet)
+    remaining := maxChars - used  // Simple math!
+    
+    fmt.Printf("You used %d characters. Remaining: %d\\n", used, remaining)
+}
+\`\`\``},defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Your code here!
+    
+}`,title:`Mission 23: String Length with len()`,description:`Master the len() function to count characters in strings! Build snack counters, password checkers, username validators, and receipt generators using fmt.Scan() and len().`,learningSteps:[{id:1,heading:`🍿 Task 1: The Basic Measurement`,text:"**Task 1 - The Basic Measurement:**\nAsk user to enter their **best Nigerian snack** using `fmt.Scan()`. Then use `len()` tell them exactly how many characters dey inside their snack name. Format: `Your snack '[input]' get [number] characters`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare variable for snack
+    
+    
+    // Ask user for their best Nigerian snack
+    
+    
+    // Scan the input
+    
+    
+    // Calculate length using len()
+    
+    
+    // Print the result with format: Your snack '[input]' get [number] characters
+    
+}`,codeTaskDescription:`Scan user's favorite Nigerian snack and print its character count using len()`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+snack\s+string/.test(e)||/snack\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&snack\s*\)/.test(e),o=/len\(\s*snack\s*\)/.test(e),s=/fmt\.Printf\(\s*".*snack.*%d.*characters.*"/.test(e)||/fmt\.Printf\(\s*".*%d.*characters.*"/.test(e)||/fmt\.Println\(\s*.*len\(\s*snack\s*\).*\)/.test(e),c=/\}\s*$/.test(e),l=e.indexOf(`package`)<e.indexOf(`import`),u=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u},hints:[`var snack string`,`fmt.Print("Enter your best Nigerian snack: ")`,`fmt.Scan(&snack)`,`length := len(snack)`,`fmt.Printf("Your snack '%s' get %d characters\\n", snack, length)`]},{id:2,heading:`🔐 Task 2: The Password Reporter`,text:"**Task 2 - The Password Reporter:**\nAsk user to enter **password** using `fmt.Scan()`. Store the length inside variable. Print: `Your password get [number] characters. Minimum required: 8. You need [8 - number] more characters to reach minimum` (If e pass 8, the math go show negative number, no wahala!)",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare password variable
+    
+    
+    // Ask user for password
+    
+    
+    // Scan the password
+    
+    
+    // Calculate length and remaining needed
+    
+    
+    // Print the password report
+    
+}`,codeTaskDescription:`Scan password and report its length vs minimum 8 characters requirement`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+password\s+string/.test(e)||/password\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&password\s*\)/.test(e),o=/len\(\s*password\s*\)/.test(e),s=/passLen\s*:=\s*len\(\s*password\s*\)/.test(e)||/length\s*:=\s*len\(\s*password\s*\)/.test(e)||/passLength\s*:=\s*len\(\s*password\s*\)/.test(e),c=/8\s*-\s*passLen/.test(e)||/8\s*-\s*length/.test(e)||/8\s*-\s*passLength/.test(e)||/8\s*-\s*len\(\s*password\s*\)/.test(e),l=/fmt\.Printf\(\s*".*password.*%d.*characters.*"/.test(e)||/fmt\.Printf\(\s*".*%d.*characters.*%d.*more.*"/.test(e),u=/\}\s*$/.test(e),d=e.indexOf(`package`)<e.indexOf(`import`),f=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d&&f},hints:[`var password string`,`fmt.Print("Enter password: ")`,`fmt.Scan(&password)`,`passLen := len(password)`,`needed := 8 - passLen`,`fmt.Printf("Your password get %d characters. Minimum required: 8. You need %d more characters\\n", passLen, needed)`]},{id:3,heading:`👤 Task 3: The Username Length`,text:"**Task 3 - The Username Length:**\nAsk user to enter **username** using `fmt.Scan()`. The system maximum na **12 characters**. Use variable `maxLength := 12`. Calculate `maxLength - len(username)` and print: `Username '[input]' get [number] characters. You have [maxLength - number] characters remaining before you reach limit`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare maxLength as 12
+    
+    
+    // Declare username variable
+    
+    
+    // Ask for username
+    
+    
+    // Scan username
+    
+    
+    // Calculate length and remaining
+    
+    
+    // Print the username report
+    
+}`,codeTaskDescription:`Scan username and report characters used vs 12 character limit`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/maxLength\s*:=\s*12/.test(e)||/var\s+maxLength\s*=\s*12/.test(e),a=/var\s+username\s+string/.test(e)||/username\s*:=\s*""/.test(e),o=/fmt\.Scan\(\s*&username\s*\)/.test(e),s=/len\(\s*username\s*\)/.test(e),c=/maxLength\s*-\s*len\(\s*username\s*\)/.test(e),l=/fmt\.Printf\(\s*".*username.*%d.*characters.*"/.test(e)||/fmt\.Printf\(\s*".*%d.*characters.*%d.*remaining.*"/.test(e),u=/\}\s*$/.test(e),d=e.indexOf(`package`)<e.indexOf(`import`),f=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d&&f},hints:[`maxLength := 12`,`var username string`,`fmt.Print("Enter username: ")`,`fmt.Scan(&username)`,`used := len(username)`,`remaining := maxLength - used`,`fmt.Printf("Username '%s' get %d characters. You have %d characters remaining\\n", username, used, remaining)`]},{id:4,heading:`🐦 Task 4: The Tweet Counter`,text:"**Task 4 - The Tweet Counter:**\nTwitter (X) allow **280 characters max**. Create variable `maxTweet := 280`. Ask user to enter **their tweet** using `fmt.Scan()`. Calculate remaining characters with simple math. Print: `Your tweet get [number] characters. Characters remaining: [280 - number]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare maxTweet as 280
+    
+    
+    // Declare tweet variable
+    
+    
+    // Ask for tweet
+    
+    
+    // Scan tweet (note: fmt.Scan stops at space!)
+    
+    
+    // Calculate length and remaining
+    
+    
+    // Print tweet count report
+    
+}`,codeTaskDescription:`Scan tweet and report characters used vs 280 character limit`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/maxTweet\s*:=\s*280/.test(e)||/var\s+maxTweet\s*=\s*280/.test(e),a=/var\s+tweet\s+string/.test(e)||/tweet\s*:=\s*""/.test(e),o=/fmt\.Scan\(\s*&tweet\s*\)/.test(e),s=/len\(\s*tweet\s*\)/.test(e),c=/maxTweet\s*-\s*len\(\s*tweet\s*\)/.test(e)||/280\s*-\s*len\(\s*tweet\s*\)/.test(e),l=/fmt\.Printf\(\s*".*tweet.*%d.*characters.*"/.test(e)||/fmt\.Printf\(\s*".*%d.*characters.*%d.*remaining.*"/.test(e),u=/\}\s*$/.test(e),d=e.indexOf(`package`)<e.indexOf(`import`),f=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d&&f},hints:[`maxTweet := 280`,`var tweet string`,`fmt.Print("Enter your tweet: ")`,`fmt.Scan(&tweet)  // Remember: stops at space!`,`tweetLen := len(tweet)`,`remaining := maxTweet - tweetLen`,`fmt.Printf("Your tweet get %d characters. Characters remaining: %d\\n", tweetLen, remaining)`]},{id:5,heading:`🧾 Task 5: The Receipt Generator`,text:"**Task 5 - The Receipt Generator:**\nYou be cashier for **Mama Put restaurant**. Ask customer to enter **3 food items one by one** using `fmt.Scan()` three times (create `var item1, item2, item3 string`). Use `len()` calculate each item length, calculate total with simple addition, then print receipt format:\n```\n--- MAMA PUT RECEIPT ---\nItem 1: [item1] ([len1] chars)\nItem 2: [item2] ([len2] chars)  \nItem 3: [item3] ([len3] chars)\n------------------------\nTotal characters typed: [len1 + len2 + len3]\n```",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare 3 item variables
+    
+    
+    // Ask and scan item 1
+    
+    
+    // Ask and scan item 2
+    
+    
+    // Ask and scan item 3
+    
+    
+    // Calculate length of each item
+    
+    
+    // Calculate total characters
+    
+    
+    // Print Mama Put receipt format
+    
+}`,codeTaskDescription:`Scan 3 food items, calculate each length with len(), print formatted receipt with total`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+item1\s*,\s*item2\s*,\s*item3\s+string/.test(e)||/item1\s*,\s*item2\s*,\s*item3\s*:=\s*""\s*,\s*""\s*,\s*""/.test(e),a=(e.match(/fmt\.Scan\(/g)||[]).length>=3,o=(e.match(/len\(\s*item[123]\s*\)/g)||[]).length>=3,s=/len\(\s*item1\s*\)\s*\+\s*len\(\s*item2\s*\)\s*\+\s*len\(\s*item3\s*\)/.test(e),c=/MAMA\s*PUT/i.test(e)||/RECEIPT/i.test(e),l=/\}\s*$/.test(e),u=e.indexOf(`package`)<e.indexOf(`import`),d=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d},hints:[`var item1, item2, item3 string`,`fmt.Print("Enter item 1: ")`,`fmt.Scan(&item1)`,`fmt.Print("Enter item 2: ")`,`fmt.Scan(&item2)`,`fmt.Print("Enter item 3: ")`,`fmt.Scan(&item3)`,`len1, len2, len3 := len(item1), len(item2), len(item3)`,`total := len1 + len2 + len3`,`Use fmt.Println to print the receipt borders and format`]}],gameTasks:[{id:1,description:`🏆 Final Challenge: Ultimate Length Master`,details:`Write a complete program that:
+
+1. Declares maxNameLength as int = 20
+2. Declares maxPasswordLength as int = 16
+3. Declares name as string
+4. Declares password as string
+5. Uses fmt.Print to ask: "Enter your full name: "
+6. Uses fmt.Scan(&name) to collect it
+7. Uses fmt.Print to ask: "Enter your password: "
+8. Uses fmt.Scan(&password) to collect it
+9. Calculates nameUsed := len(name)
+10. Calculates nameRemaining := maxNameLength - nameUsed
+11. Calculates passwordUsed := len(password)
+12. Calculates passwordRemaining := maxPasswordLength - passwordUsed
+13. Uses fmt.Printf to print a complete report:
+    - Name: '%s' - %d characters used, %d remaining (limit: %d)
+    - Password: '%s' - %d characters used, %d remaining (limit: %d)
+
+Show that you have mastered len() with multiple variables and limits!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_max_name`,description:`Declare maxNameLength as int with value 20`,test:e=>/maxNameLength\s*:=\s*20/.test(e)||/var\s+maxNameLength\s*=\s*20/.test(e)},{id:`req_max_password`,description:`Declare maxPasswordLength as int with value 16`,test:e=>/maxPasswordLength\s*:=\s*16/.test(e)||/var\s+maxPasswordLength\s*=\s*16/.test(e)},{id:`req_name_var`,description:`Declare name as string`,test:e=>/var\s+name\s+string/.test(e)||/name\s*:=\s*""/.test(e)},{id:`req_password_var`,description:`Declare password as string`,test:e=>/var\s+password\s+string/.test(e)||/password\s*:=\s*""/.test(e)},{id:`req_ask_name`,description:`Use fmt.Print to ask for full name`,test:e=>/fmt\.Print\(\s*".*name.*"\s*\)/i.test(e)},{id:`req_scan_name`,description:`Use fmt.Scan(&name) with & symbol`,test:e=>/fmt\.Scan\(\s*&name\s*\)/.test(e)},{id:`req_ask_password`,description:`Use fmt.Print to ask for password`,test:e=>/fmt\.Print\(\s*".*password.*"\s*\)/i.test(e)},{id:`req_scan_password`,description:`Use fmt.Scan(&password) with & symbol`,test:e=>/fmt\.Scan\(\s*&password\s*\)/.test(e)},{id:`req_name_len`,description:`Calculate nameUsed with len(name)`,test:e=>/nameUsed\s*:=\s*len\(\s*name\s*\)/.test(e)||/nameUsed\s*=\s*len\(\s*name\s*\)/.test(e)},{id:`req_name_remaining`,description:`Calculate nameRemaining with maxNameLength - nameUsed`,test:e=>/nameRemaining\s*:=\s*maxNameLength\s*-\s*nameUsed/.test(e)||/nameRemaining\s*=\s*maxNameLength\s*-\s*nameUsed/.test(e)},{id:`req_password_len`,description:`Calculate passwordUsed with len(password)`,test:e=>/passwordUsed\s*:=\s*len\(\s*password\s*\)/.test(e)||/passwordUsed\s*=\s*len\(\s*password\s*\)/.test(e)},{id:`req_password_remaining`,description:`Calculate passwordRemaining with maxPasswordLength - passwordUsed`,test:e=>/passwordRemaining\s*:=\s*maxPasswordLength\s*-\s*passwordUsed/.test(e)||/passwordRemaining\s*=\s*maxPasswordLength\s*-\s*passwordUsed/.test(e)},{id:`req_printf`,description:`Use fmt.Printf to print complete report with all values`,test:e=>/fmt\.Printf\(\s*".*%s.*%d.*%d.*%d.*"/.test(e)&&/fmt\.Printf\(\s*".*password.*"/.test(e)},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`🎯🏆 ULTIMATE LENGTH MASTER! 📏 You have mastered len() with multiple variables and limits! You can build any character counting system—password checkers, username validators, tweet counters, and more! Chinedu's Mama Put restaurant software is in good hands! 🧾✨`}],conceptSummary:{title:`String Length with len() Essentials`,points:[`**len(string) counts bytes** - Returns the number of bytes in the string`,`**ASCII = 1 byte per char** - For English letters, len() equals character count`,`**Unicode different** - Special characters may use more bytes (we'll learn later)`,`**len(word) - 1 = last index** - To get the last character position`,`**word[index] gives byte** - Must convert with string() to display as text`,`**fmt.Scan stops at space** - For multi-word input, use Scanln (coming soon)`,`**String indexing** - word[0] is first, word[len(word)-1] is last`,`**len() works on strings, arrays, slices, maps** - Very versatile function!`]}},{id:31,lesson:{pigin:`
+
+## 🟢 CONCEPT 3: The Danfo Queue & The Byte Trap (String Indexing with \`[]\`)
+
+### The Explanation (Broken Down Well Well)
+
+**Wetin be String Indexing for Go?**
+
+Imagine you dey **Oshodi bus stop** for Lagos. One **Danfo bus** (yellow bus) arrive, and people dey queue to enter. The conductor dey shout: *"Number 0, enter! Number 1, enter! Number 2, enter!"*
+
+Wait wait! **Number 0?** Yes o! For programming, we **no dey start counting from 1 like normal human being**. We dey start from **0**!
+
+So for the queue:
+- Position 0 = First person (the person for front)
+- Position 1 = Second person
+- Position 2 = Third person
+- And so on...
+
+**Now, The Bracket \`[]\` - Wetin E Mean?**
+
+For Go, the **square bracket \`[]\`** na your **pointing finger**! When you put number inside am, you dey **point at specific position** for the string.
+
+The format na:
+\`\`\`go
+variableName[indexNumber]
+\`\`\`
+
+Break am down:
+- \`variableName\` = The string wey you wan look inside
+- \`[\` = Open the bracket (start pointing)
+- \`indexNumber\` = The position number you wan point at
+- \`]\` = Close the bracket (finish pointing)
+
+**Example:**
+\`\`\`go
+word := "Naija"
+
+// The queue be like:
+// Position:  0    1    2    3    4
+// Letter:    N    a    i    j    a
+
+word[0]  // This mean: "Go to variable 'word', point at position 0"
+word[1]  // This mean: "Go to variable 'word', point at position 1"
+word[2]  // This mean: "Go to variable 'word', point at position 2"
+\`\`\`
+
+**How You Write Am for Code:**
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    word := "Naija"
+    
+    // Using the bracket [] to point at positions
+    first := word[0]   // Point at position 0, store result inside 'first'
+    second := word[1]  // Point at position 1, store result inside 'second'
+    third := word[2]   // Point at position 2, store result inside 'third'
+    
+    fmt.Println(first)   // Print wetin we get
+    fmt.Println(second)  // Print wetin we get
+    fmt.Println(third)   // Print wetin we get
+}
+\`\`\`
+
+**BUT HERE COME THE BIG WAHALA - THE BYTE TRAP! 🚨**
+
+For Go, when you use bracket \`[]\` to point at string position, Go **no dey give you the letter**! Go dey give you the **byte value** (number) of that letter!
+
+Wetin be byte value? Every letter get number wey computer use represent am for inside memory. For example:
+- 'N' = 78
+- 'a' = 97
+- 'i' = 105
+- 'j' = 106
+
+So if you do:
+\`\`\`go
+word := "Naija"
+fmt.Println(word[0])  // This go print 78, no be 'N'!
+fmt.Println(word[1])  // This go print 97, no be 'a'!
+\`\`\`
+
+**Why Go Dey Do Like This?**
+
+Go na **strict language**! E want make you **know exactly wetin you dey do**. When you use \`[]\` on string, Go assume say you wan see the **raw byte data** wey dey inside computer memory, no be the pretty letter.
+
+This na **The Byte Trap** - many beginners fall inside! Dem expect see letter, but dem see weird number instead!
+
+**The Bracket \`[]\` Summary:**
+- \`word[0]\` = Point at first position, get byte number
+- \`word[1]\` = Point at second position, get byte number
+- \`word[2]\` = Point at third position, get byte number
+- The number inside \`[]\` na the **index** (position for queue)
+- Index **always start from 0**, no be 1!
+
+**Important Warning:**
+If you point at position wey no exist (like \`word[10]\` when word only get 5 letters), Go go **crash** (panic)! Like pointing at person for queue when nobody dey there!
+
+---
+
+### The Example (Clear Go Code - The Trap in Action)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    var food string
+    
+    fmt.Print("Enter your favorite Nigerian food: ")
+    fmt.Scan(&food)
+    
+    // DANFO QUEUE - Using bracket [] to point at positions
+    
+    // word[0] = Use bracket to point at position 0 (first letter)
+    // word[1] = Use bracket to point at position 1 (second letter)
+    // word[2] = Use bracket to point at position 2 (third letter)
+    
+    fmt.Printf("The word '%s' get %d characters\\n", food, len(food))
+    
+    // Using bracket [0] to point at first position
+    fmt.Printf("Bracket [0] (first letter) give us: %d\\n", food[0])
+    // ^^ This go print NUMBER, no be letter! This na THE BYTE TRAP!
+    
+    // Using bracket [1] to point at second position
+    fmt.Printf("Bracket [1] (second letter) give us: %d\\n", food[1])
+    // ^^ This go print NUMBER too!
+    
+    // Using bracket [2] to point at third position
+    fmt.Printf("Bracket [2] (third letter) give us: %d\\n", food[2])
+    // ^^ Number again!
+    
+    // Using bracket with variable
+    position := 1
+    fmt.Printf("Bracket [%d] give us: %d\\n", position, food[position])
+    // You fit use variable inside bracket too!
+}
+\`\`\`
+
+**Sample Output if user type "Jollof":**
+\`\`\`
+Enter your favorite Nigerian food: Jollof
+The word 'Jollof' get 6 characters
+Bracket [0] (first letter) give us: 74    <-- 'J' = 74 for computer!
+Bracket [1] (second letter) give us: 111   <-- 'o' = 111!
+Bracket [2] (third letter) give us: 108    <-- 'l' = 108!
+Bracket [1] give us: 111
+\`\`\``,eng:`
+
+## 🟢 CONCEPT 3: The Danfo Queue & The Byte Trap (String Indexing with \`[]\`)
+
+### The Explanation (Broken Down Very Well)
+
+**What is String Indexing in Go?**
+
+Imagine you are at **Oshodi bus stop** in Lagos. A **Danfo bus** (yellow bus) arrives, and people are queuing to enter. The conductor is shouting: *"Number 0, enter! Number 1, enter! Number 2, enter!"*
+
+Wait wait! **Number 0?** Yes! In programming, we **don't start counting from 1 like normal human beings**. We start from **0**!
+
+So for the queue:
+- Position 0 = First person (the person at the front)
+- Position 1 = Second person
+- Position 2 = Third person
+- And so on...
+
+**Now, The Bracket \`[]\` - What Does It Mean?**
+
+In Go, the **square bracket \`[]\`** is your **pointing finger**! When you put a number inside it, you are **pointing at a specific position** in the string.
+
+The format is:
+\`\`\`go
+variableName[indexNumber]
+\`\`\`
+
+Break it down:
+- \`variableName\` = The string you want to look inside
+- \`[\` = Open the bracket (start pointing)
+- \`indexNumber\` = The position number you want to point at
+- \`]\` = Close the bracket (finish pointing)
+
+**Example:**
+\`\`\`go
+word := "Naija"
+
+// The queue is like:
+// Position:  0    1    2    3    4
+// Letter:    N    a    i    j    a
+
+word[0]  // This means: "Go to variable 'word', point at position 0"
+word[1]  // This means: "Go to variable 'word', point at position 1"
+word[2]  // This means: "Go to variable 'word', point at position 2"
+\`\`\`
+
+**How You Write It in Code:**
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    word := "Naija"
+    
+    // Using the bracket [] to point at positions
+    first := word[0]   // Point at position 0, store result inside 'first'
+    second := word[1]  // Point at position 1, store result inside 'second'
+    third := word[2]   // Point at position 2, store result inside 'third'
+    
+    fmt.Println(first)   // Print what we got
+    fmt.Println(second)  // Print what we got
+    fmt.Println(third)   // Print what we got
+}
+\`\`\`
+
+**BUT HERE COMES THE BIG PROBLEM - THE BYTE TRAP! 🚨**
+
+In Go, when you use bracket \`[]\` to point at a string position, Go **doesn't give you the letter**! Go gives you the **byte value** (number) of that letter!
+
+What is byte value? Every letter has a number that the computer uses to represent it in memory. For example:
+- 'N' = 78
+- 'a' = 97
+- 'i' = 105
+- 'j' = 106
+
+So if you do:
+\`\`\`go
+word := "Naija"
+fmt.Println(word[0])  // This will print 78, not 'N'!
+fmt.Println(word[1])  // This will print 97, not 'a'!
+\`\`\`
+
+**Why Does Go Do This?**
+
+Go is a **strict language**! It wants you to **know exactly what you are doing**. When you use \`[]\` on a string, Go assumes you want to see the **raw byte data** that is inside the computer memory, not the pretty letter.
+
+This is **The Byte Trap** - many beginners fall into it! They expect to see a letter, but they see a weird number instead!
+
+**The Bracket \`[]\` Summary:**
+- \`word[0]\` = Point at first position, get byte number
+- \`word[1]\` = Point at second position, get byte number
+- \`word[2]\` = Point at third position, get byte number
+- The number inside \`[]\` is the **index** (position in queue)
+- Index **always starts from 0**, not 1!
+
+**Important Warning:**
+If you point at a position that doesn't exist (like \`word[10]\` when the word only has 5 letters), Go will **crash** (panic)! Like pointing at a person in the queue when nobody is there!
+
+---
+
+### The Example (Clear Go Code - The Trap in Action)
+
+\`\`\`go
+package main
+
+import "fmt"
+
+func main() {
+    var food string
+    
+    fmt.Print("Enter your favorite Nigerian food: ")
+    fmt.Scan(&food)
+    
+    // DANFO QUEUE - Using bracket [] to point at positions
+    
+    // word[0] = Use bracket to point at position 0 (first letter)
+    // word[1] = Use bracket to point at position 1 (second letter)
+    // word[2] = Use bracket to point at position 2 (third letter)
+    
+    fmt.Printf("The word '%s' has %d characters\\n", food, len(food))
+    
+    // Using bracket [0] to point at first position
+    fmt.Printf("Bracket [0] (first letter) gives us: %d\\n", food[0])
+    // ^^ This will print NUMBER, not letter! This is THE BYTE TRAP!
+    
+    // Using bracket [1] to point at second position
+    fmt.Printf("Bracket [1] (second letter) gives us: %d\\n", food[1])
+    // ^^ This will print NUMBER too!
+    
+    // Using bracket [2] to point at third position
+    fmt.Printf("Bracket [2] (third letter) gives us: %d\\n", food[2])
+    // ^^ Number again!
+    
+    // Using bracket with variable
+    position := 1
+    fmt.Printf("Bracket [%d] gives us: %d\\n", position, food[position])
+    // You can use variable inside bracket too!
+}
+\`\`\`
+
+**Sample Output if user types "Jollof":**
+\`\`\`
+Enter your favorite Nigerian food: Jollof
+The word 'Jollof' has 6 characters
+Bracket [0] (first letter) gives us: 74    <-- 'J' = 74 for computer!
+Bracket [1] (second letter) gives us: 111   <-- 'o' = 111!
+Bracket [2] (third letter) gives us: 108    <-- 'l' = 108!
+Bracket [1] gives us: 111
+\`\`\``},defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Your code here!
+    
+}`,title:`Mission 24: Bracket Notation [0] - Byte Discovery`,description:`Discover what brackets really return! Learn that word[0] gives byte numbers (not letters), build byte tables, and understand the foundation of string indexing in Go!`,learningSteps:[{id:1,heading:`🔍 Task 1: Meet The Bracket`,text:"**Task 1 - Meet The Bracket:**\nAsk user to enter **their first name** using `fmt.Scan()`. Use bracket `[0]` to point at first position and print wetin you see. Format: `Your name '[name]' get [length] characters. Using bracket [0] give us: [weird number]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare name variable
+    
+    
+    // Ask for first name
+    
+    
+    // Scan the name
+    
+    
+    // Print name, length, and what bracket [0] gives
+    
+}`,codeTaskDescription:`Scan first name and discover what bracket [0] returns (a byte number, not a letter!)`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+name\s+string/.test(e)||/name\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&name\s*\)/.test(e),o=/name\[0\]/.test(e),s=/len\(\s*name\s*\)/.test(e),c=/fmt\.Printf\(\s*".*\[0\].*%d.*"/.test(e)||/fmt\.Printf\(\s*".*%d.*\[0\].*"/.test(e)||/fmt\.Println\(\s*.*name\[0\].*\)/.test(e),l=/\}\s*$/.test(e),u=e.indexOf(`package`)<e.indexOf(`import`),d=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d},hints:[`var name string`,`fmt.Print("Enter your first name: ")`,`fmt.Scan(&name)`,`length := len(name)`,`fmt.Printf("Your name '%s' get %d characters. Using bracket [0] give us: %d\\n", name, length, name[0])`,`Notice: name[0] gives a NUMBER (the ASCII/UTF-8 byte value), not the letter!`]},{id:2,heading:`🔢 Task 2: Two Brackets`,text:"**Task 2 - Two Brackets:**\nAsk user to enter **their favorite Nigerian artist** using `fmt.Scan()`. Use bracket `[0]` and bracket `[1]`, store results in variables `firstByte` and `secondByte`, then print. Format: `Artist: [name]. Bracket [0] = [number], Bracket [1] = [number]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare artist variable
+    
+    
+    // Declare firstByte and secondByte variables
+    
+    
+    // Ask for favorite Nigerian artist
+    
+    
+    // Scan the artist
+    
+    
+    // Use brackets [0] and [1] to get byte values
+    
+    
+    // Print the results
+    
+}`,codeTaskDescription:`Scan Nigerian artist and store bracket [0] and [1] results in variables, then print`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+artist\s+string/.test(e)||/artist\s*:=\s*""/.test(e),a=/firstByte\s*:=\s*artist\[0\]/.test(e)||/firstByte\s*=\s*artist\[0\]/.test(e),o=/secondByte\s*:=\s*artist\[1\]/.test(e)||/secondByte\s*=\s*artist\[1\]/.test(e),s=/fmt\.Scan\(\s*&artist\s*\)/.test(e),c=/fmt\.Printf\(\s*".*firstByte.*secondByte.*"/.test(e)||/fmt\.Printf\(\s*".*\[0\].*\[1\].*"/.test(e),l=/\}\s*$/.test(e),u=e.indexOf(`package`)<e.indexOf(`import`),d=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d},hints:[`var artist string`,`var firstByte, secondByte byte`,`fmt.Print("Enter favorite Nigerian artist: ")`,`fmt.Scan(&artist)`,`firstByte = artist[0]`,`secondByte = artist[1]`,`fmt.Printf("Artist: %s. Bracket [0] = %d, Bracket [1] = %d\\n", artist, firstByte, secondByte)`]},{id:3,heading:`🔢 Task 3: Three Brackets`,text:"**Task 3 - Three Brackets:**\nAsk user to enter **a Nigerian state** using `fmt.Scan()`. Use bracket `[0]`, `[1]`, and `[2]` directly inside Printf. Format: `State: [name]. Bracket [0] = [num], Bracket [1] = [num], Bracket [2] = [num]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare state variable
+    
+    
+    // Ask for Nigerian state
+    
+    
+    // Scan the state
+    
+    
+    // Print using brackets [0], [1], [2] directly in Printf
+    
+}`,codeTaskDescription:`Scan Nigerian state and use brackets [0], [1], [2] directly inside fmt.Printf`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+state\s+string/.test(e)||/state\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&state\s*\)/.test(e),o=(e.match(/state\[[012]\]/g)||[]).length>=3,s=/fmt\.Printf\(\s*".*\[0\].*\[1\].*\[2\].*"/.test(e),c=/\}\s*$/.test(e),l=e.indexOf(`package`)<e.indexOf(`import`),u=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u},hints:[`var state string`,`fmt.Print("Enter a Nigerian state: ")`,`fmt.Scan(&state)`,`fmt.Printf("State: %s. Bracket [0] = %d, Bracket [1] = %d, Bracket [2] = %d\\n", state, state[0], state[1], state[2])`,`You can use state[0], state[1], state[2] directly as arguments!`]},{id:4,heading:`🎯 Task 4: Bracket with Variable`,text:"**Task 4 - Bracket with Variable:**\nAsk user to enter **a word with at least 4 characters** using `fmt.Scan()`. Create variable `lastPos := len(word) - 1` (simple math!). Use bracket `[lastPos]` to point at last letter. Format: `Word: [name]. Bracket [0] = [num]. Bracket [lastPos] = [num]`",challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare word variable
+    
+    
+    // Ask for word with at least 4 characters
+    
+    
+    // Scan the word
+    
+    
+    // Calculate lastPos using len(word) - 1
+    
+    
+    // Print using bracket [0] and bracket [lastPos]
+    
+}`,codeTaskDescription:`Scan word, calculate lastPos with len(word)-1, use bracket [lastPos] to get last byte`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+word\s+string/.test(e)||/word\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&word\s*\)/.test(e),o=/lastPos\s*:=\s*len\(\s*word\s*\)\s*-\s*1/.test(e)||/lastPos\s*=\s*len\(\s*word\s*\)\s*-\s*1/.test(e),s=/word\[0\]/.test(e),c=/word\[lastPos\]/.test(e),l=/fmt\.Printf\(\s*".*\[0\].*\[lastPos\].*"/.test(e)||/fmt\.Printf\(\s*".*\[0\].*%d.*"/.test(e),u=/\}\s*$/.test(e),d=e.indexOf(`package`)<e.indexOf(`import`),f=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d&&f},hints:[`var word string`,`fmt.Print("Enter a word with at least 4 characters: ")`,`fmt.Scan(&word)`,`lastPos := len(word) - 1`,`fmt.Printf("Word: %s. Bracket [0] = %d. Bracket [lastPos] = %d\\n", word, word[0], word[lastPos])`,`lastPos variable can be used inside brackets!`]},{id:5,heading:`📊 Task 5: The Byte Table with Brackets`,text:`**Task 5 - The Byte Table with Brackets:**
+Ask user to enter **their best Nigerian food** using \`fmt.Scan()\`. Print a table showing:
+\`\`\`
+Food: [name]
+Length: [number]
+----------------
+Bracket [0]: [byte number]
+Bracket [1]: [byte number]  
+Bracket [2]: [byte number]
+Bracket [3]: [byte number]
+\`\`\`
+*Hint: Assume user go type word with at least 4 characters so you no go crash!*`,challengeType:`code`,defaultCode:`package main
+
+import "fmt"
+
+func main() {
+    // Declare food variable
+    
+    
+    // Ask for best Nigerian food
+    
+    
+    // Scan the food
+    
+    
+    // Calculate length
+    
+    
+    // Print the byte table with brackets [0], [1], [2], [3]
+    
+}`,codeTaskDescription:`Scan Nigerian food and print a formatted table showing byte values for brackets [0] through [3]`,checkCode:e=>{let t=/package\s+main/.test(e),n=/import\s+"fmt"/.test(e),r=/func\s+main\s*\(\s*\)\s*\{/.test(e),i=/var\s+food\s+string/.test(e)||/food\s*:=\s*""/.test(e),a=/fmt\.Scan\(\s*&food\s*\)/.test(e),o=/len\(\s*food\s*\)/.test(e),s=(e.match(/food\[[0123]\]/g)||[]).length>=4,c=/Food:.*%s/.test(e)&&/Length:.*%d/.test(e)&&/Bracket\s*\[0\]/.test(e),l=/\}\s*$/.test(e),u=e.indexOf(`package`)<e.indexOf(`import`),d=e.indexOf(`import`)<e.indexOf(`func main`);return t&&n&&r&&i&&a&&o&&s&&c&&l&&u&&d},hints:[`var food string`,`fmt.Print("Enter your best Nigerian food: ")`,`fmt.Scan(&food)`,`length := len(food)`,`fmt.Printf("Food: %s\\n", food)`,`fmt.Printf("Length: %d\\n", length)`,`fmt.Println("----------------")`,`fmt.Printf("Bracket [0]: %d\\n", food[0])`,`fmt.Printf("Bracket [1]: %d\\n", food[1])`,`fmt.Printf("Bracket [2]: %d\\n", food[2])`,`fmt.Printf("Bracket [3]: %d\\n", food[3])`]}],gameTasks:[{id:1,description:`🏆 Final Challenge: Byte Detective`,details:`Write a complete program that:
+
+1. Declares alphabet as string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+2. Uses fmt.Println to print: "The English Alphabet Byte Table:"
+3. Uses fmt.Println to print a separator line: "-------------------------------"
+4. Uses fmt.Printf with brackets to print positions 0, 5, 10, 15, 20, 25:
+   Format for each: "Position [X]: Bracket gives byte %d"
+5. Uses fmt.Println to print: "Notice: A=65, F=70, K=75, P=80, U=85, Z=90"
+6. Uses fmt.Println to print: "Pattern: Each letter increases by 5 in the alphabet, byte increases by 5!"
+
+Show that you understand that brackets give BYTE NUMBERS and discover the ASCII pattern!`,requirements:[{id:`req_package`,description:`Declare 'package main' at the top`,test:e=>/^package\s+main/.test(e.trim())},{id:`req_import`,description:`Import the 'fmt' package`,test:e=>/import\s+"fmt"/.test(e)},{id:`req_main`,description:`Create the func main() function`,test:e=>/func\s+main\s*\(\s*\)\s*\{/.test(e)},{id:`req_alphabet`,description:`Declare alphabet as string with value 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`,test:e=>/alphabet\s*:=\s*"ABCDEFGHIJKLMNOPQRSTUVWXYZ"/.test(e)||/var\s+alphabet\s*=\s*"ABCDEFGHIJKLMNOPQRSTUVWXYZ"/.test(e)},{id:`req_title`,description:`Print title 'The English Alphabet Byte Table:'`,test:e=>/fmt\.Println\(\s*".*Alphabet.*Byte.*Table.*"/i.test(e)},{id:`req_separator`,description:`Print separator line with dashes`,test:e=>/fmt\.Println\(\s*".*---.*"/.test(e)||/fmt\.Println\(\s*".*===.*"/.test(e)},{id:`req_position_0`,description:`Print position 0 with bracket alphabet[0]`,test:e=>/fmt\.Printf\(\s*".*\[0\].*%d.*".*alphabet\[0\]/.test(e)||/fmt\.Printf\(\s*".*0.*".*alphabet\[0\]/.test(e)},{id:`req_position_5`,description:`Print position 5 with bracket alphabet[5]`,test:e=>/fmt\.Printf\(\s*".*\[5\].*%d.*".*alphabet\[5\]/.test(e)||/fmt\.Printf\(\s*".*5.*".*alphabet\[5\]/.test(e)},{id:`req_position_10`,description:`Print position 10 with bracket alphabet[10]`,test:e=>/fmt\.Printf\(\s*".*\[10\].*%d.*".*alphabet\[10\]/.test(e)||/fmt\.Printf\(\s*".*10.*".*alphabet\[10\]/.test(e)},{id:`req_position_15`,description:`Print position 15 with bracket alphabet[15]`,test:e=>/fmt\.Printf\(\s*".*\[15\].*%d.*".*alphabet\[15\]/.test(e)||/fmt\.Printf\(\s*".*15.*".*alphabet\[15\]/.test(e)},{id:`req_position_20`,description:`Print position 20 with bracket alphabet[20]`,test:e=>/fmt\.Printf\(\s*".*\[20\].*%d.*".*alphabet\[20\]/.test(e)||/fmt\.Printf\(\s*".*20.*".*alphabet\[20\]/.test(e)},{id:`req_position_25`,description:`Print position 25 with bracket alphabet[25]`,test:e=>/fmt\.Printf\(\s*".*\[25\].*%d.*".*alphabet\[25\]/.test(e)||/fmt\.Printf\(\s*".*25.*".*alphabet\[25\]/.test(e)},{id:`req_pattern_notice`,description:`Print notice about A=65, F=70, K=75, P=80, U=85, Z=90`,test:e=>/fmt\.Println\(\s*".*A=65.*F=70.*K=75.*P=80.*U=85.*Z=90.*"/.test(e)||/fmt\.Println\(\s*".*65.*70.*75.*80.*85.*90.*"/.test(e)},{id:`req_pattern_explanation`,description:`Print explanation about pattern (increases by 5)`,test:e=>/fmt\.Println\(\s*".*Pattern.*increases.*5.*"/i.test(e)||/fmt\.Println\(\s*".*increases.*by.*5.*"/i.test(e)},{id:`req_structure`,description:`Correct file structure (Order and matching braces {})`,test:e=>{let t=(e.match(/\{/g)||[]).length===(e.match(/\}/g)||[]).length,n=/\}\s*$/.test(e.trim()),r=e.indexOf(`package`),i=e.indexOf(`import`),a=e.indexOf(`func main`);return t&&n&&(r!==-1&&i!==-1?r<i:!0)&&(i!==-1&&a!==-1?i<a:!0)}}],check:function(e){return this.requirements?this.requirements.every(t=>t.test(e)):!1},successMessage:`🕵️🏆 BYTE DETECTIVE! 🔢 You have discovered that brackets give BYTE NUMBERS, not letters! You found the ASCII pattern: A=65, B=66, C=67... each letter has its own number code. This is the foundation of how computers store text! Next lesson: we learn how to convert these bytes back to letters with string()! 🎉✨`}],conceptSummary:{title:`Bracket Notation [0] Essentials`,points:[`**word[0] gives a BYTE** - It's a number (0-255), not the letter!`,`**ASCII table** - 'A' = 65, 'B' = 66, 'a' = 97, '0' = 48`,`**UTF-8 encoding** - Go uses UTF-8, English letters = 1 byte each`,`**len(word) - 1 = last index** - To get the last position`,`**Variable in brackets** - You can use word[lastPos] where lastPos is a variable`,`**Bracket [0] is first** - Computers count from 0, not 1!`,`**Byte vs Character** - For ASCII English, 1 byte = 1 character (mostly)`,`**Next lesson** - We learn string() to convert bytes back to letters!`]}}]}];function b(e,t){var n={};for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r]);if(e!=null&&typeof Object.getOwnPropertySymbols==`function`)for(var i=0,r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]]);return n}function x(e,t,n,r){function i(e){return e instanceof n?e:new n(function(t){t(e)})}return new(n||=Promise)(function(n,a){function o(e){try{c(r.next(e))}catch(e){a(e)}}function s(e){try{c(r.throw(e))}catch(e){a(e)}}function c(e){e.done?n(e.value):i(e.value).then(o,s)}c((r=r.apply(e,t||[])).next())})}var S=e=>e?(...t)=>e(...t):(...e)=>fetch(...e),C=class extends Error{constructor(e,t=`FunctionsError`,n){super(e),this.name=t,this.context=n}},w=class extends C{constructor(e){super(`Failed to send a request to the Edge Function`,`FunctionsFetchError`,e)}},T=class extends C{constructor(e){super(`Relay Error invoking the Edge Function`,`FunctionsRelayError`,e)}},E=class extends C{constructor(e){super(`Edge Function returned a non-2xx status code`,`FunctionsHttpError`,e)}},D;(function(e){e.Any=`any`,e.ApNortheast1=`ap-northeast-1`,e.ApNortheast2=`ap-northeast-2`,e.ApSouth1=`ap-south-1`,e.ApSoutheast1=`ap-southeast-1`,e.ApSoutheast2=`ap-southeast-2`,e.CaCentral1=`ca-central-1`,e.EuCentral1=`eu-central-1`,e.EuWest1=`eu-west-1`,e.EuWest2=`eu-west-2`,e.EuWest3=`eu-west-3`,e.SaEast1=`sa-east-1`,e.UsEast1=`us-east-1`,e.UsWest1=`us-west-1`,e.UsWest2=`us-west-2`})(D||={});var O=class{constructor(e,{headers:t={},customFetch:n,region:r=D.Any}={}){this.url=e,this.headers=t,this.region=r,this.fetch=S(n)}setAuth(e){this.headers.Authorization=`Bearer ${e}`}invoke(e){return x(this,arguments,void 0,function*(e,t={}){let n,r;try{let{headers:i,method:a,body:o,signal:s,timeout:c}=t,l={},{region:u}=t;u||=this.region;let d=new URL(`${this.url}/${e}`);u&&u!==`any`&&(l[`x-region`]=u,d.searchParams.set(`forceFunctionRegion`,u));let f;o&&(i&&!Object.prototype.hasOwnProperty.call(i,`Content-Type`)||!i)?typeof Blob<`u`&&o instanceof Blob||o instanceof ArrayBuffer?(l[`Content-Type`]=`application/octet-stream`,f=o):typeof o==`string`?(l[`Content-Type`]=`text/plain`,f=o):typeof FormData<`u`&&o instanceof FormData?f=o:(l[`Content-Type`]=`application/json`,f=JSON.stringify(o)):f=o&&typeof o!=`string`&&!(typeof Blob<`u`&&o instanceof Blob)&&!(o instanceof ArrayBuffer)&&!(typeof FormData<`u`&&o instanceof FormData)?JSON.stringify(o):o;let p=s;c&&(r=new AbortController,n=setTimeout(()=>r.abort(),c),s?(p=r.signal,s.addEventListener(`abort`,()=>r.abort())):p=r.signal);let m=yield this.fetch(d.toString(),{method:a||`POST`,headers:Object.assign(Object.assign(Object.assign({},l),this.headers),i),body:f,signal:p}).catch(e=>{throw new w(e)}),h=m.headers.get(`x-relay-error`);if(h&&h===`true`)throw new T(m);if(!m.ok)throw new E(m);let g=(m.headers.get(`Content-Type`)??`text/plain`).split(`;`)[0].trim(),_;return _=g===`application/json`?yield m.json():g===`application/octet-stream`||g===`application/pdf`?yield m.blob():g===`text/event-stream`?m:g===`multipart/form-data`?yield m.formData():yield m.text(),{data:_,error:null,response:m}}catch(e){return{data:null,error:e,response:e instanceof E||e instanceof T?e.context:void 0}}finally{n&&clearTimeout(n)}})}},k=class extends Error{constructor(e){super(e.message),this.name=`PostgrestError`,this.details=e.details,this.hint=e.hint,this.code=e.code}},ee=class{constructor(e){this.shouldThrowOnError=!1,this.method=e.method,this.url=e.url,this.headers=new Headers(e.headers),this.schema=e.schema,this.body=e.body,this.shouldThrowOnError=e.shouldThrowOnError??!1,this.signal=e.signal,this.isMaybeSingle=e.isMaybeSingle??!1,this.urlLengthLimit=e.urlLengthLimit??8e3,e.fetch?this.fetch=e.fetch:this.fetch=fetch}throwOnError(){return this.shouldThrowOnError=!0,this}setHeader(e,t){return this.headers=new Headers(this.headers),this.headers.set(e,t),this}then(e,t){var n=this;this.schema===void 0||([`GET`,`HEAD`].includes(this.method)?this.headers.set(`Accept-Profile`,this.schema):this.headers.set(`Content-Profile`,this.schema)),this.method!==`GET`&&this.method!==`HEAD`&&this.headers.set(`Content-Type`,`application/json`);let r=this.fetch,i=r(this.url.toString(),{method:this.method,headers:this.headers,body:JSON.stringify(this.body),signal:this.signal}).then(async e=>{let t=null,r=null,i=null,a=e.status,o=e.statusText;if(e.ok){if(n.method!==`HEAD`){let t=await e.text();t===``||(r=n.headers.get(`Accept`)===`text/csv`||n.headers.get(`Accept`)&&n.headers.get(`Accept`)?.includes(`application/vnd.pgrst.plan+text`)?t:JSON.parse(t))}let s=n.headers.get(`Prefer`)?.match(/count=(exact|planned|estimated)/),c=e.headers.get(`content-range`)?.split(`/`);s&&c&&c.length>1&&(i=parseInt(c[1])),n.isMaybeSingle&&n.method===`GET`&&Array.isArray(r)&&(r.length>1?(t={code:`PGRST116`,details:`Results contain ${r.length} rows, application/vnd.pgrst.object+json requires 1 row`,hint:null,message:`JSON object requested, multiple (or no) rows returned`},r=null,i=null,a=406,o=`Not Acceptable`):r=r.length===1?r[0]:null)}else{var s;let i=await e.text();try{t=JSON.parse(i),Array.isArray(t)&&e.status===404&&(r=[],t=null,a=200,o=`OK`)}catch{e.status===404&&i===``?(a=204,o=`No Content`):t={message:i}}if(t&&n.isMaybeSingle&&!(t==null||(s=t.details)==null)&&s.includes(`0 rows`)&&(t=null,a=200,o=`OK`),t&&n.shouldThrowOnError)throw new k(t)}return{error:t,data:r,count:i,status:a,statusText:o}});return this.shouldThrowOnError||(i=i.catch(e=>{let t=``,n=``,r=``,i=e?.cause;if(i){let n=i?.message??``,r=i?.code??``;t=`${e?.name??`FetchError`}: ${e?.message}`,t+=`\n\nCaused by: ${i?.name??`Error`}: ${n}`,r&&(t+=` (${r})`),i?.stack&&(t+=`\n${i.stack}`)}else t=e?.stack??``;let a=this.url.toString().length;return e?.name===`AbortError`||e?.code===`ABORT_ERR`?(r=``,n=`Request was aborted (timeout or manual cancellation)`,a>this.urlLengthLimit&&(n+=`. Note: Your request URL is ${a} characters, which may exceed server limits. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [many IDs])), consider using an RPC function to pass values server-side.`)):(i?.name===`HeadersOverflowError`||i?.code===`UND_ERR_HEADERS_OVERFLOW`)&&(r=``,n=`HTTP headers exceeded server limits (typically 16KB)`,a>this.urlLengthLimit&&(n+=`. Your request URL is ${a} characters. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [200+ IDs])), consider using an RPC function instead.`)),{error:{message:`${e?.name??`FetchError`}: ${e?.message}`,details:t,hint:n,code:r},data:null,count:null,status:0,statusText:``}})),i.then(e,t)}returns(){return this}overrideTypes(){return this}},te=class extends ee{select(e){let t=!1,n=(e??`*`).split(``).map(e=>/\s/.test(e)&&!t?``:(e===`"`&&(t=!t),e)).join(``);return this.url.searchParams.set(`select`,n),this.headers.append(`Prefer`,`return=representation`),this}order(e,{ascending:t=!0,nullsFirst:n,foreignTable:r,referencedTable:i=r}={}){let a=i?`${i}.order`:`order`,o=this.url.searchParams.get(a);return this.url.searchParams.set(a,`${o?`${o},`:``}${e}.${t?`asc`:`desc`}${n===void 0?``:n?`.nullsfirst`:`.nullslast`}`),this}limit(e,{foreignTable:t,referencedTable:n=t}={}){let r=n===void 0?`limit`:`${n}.limit`;return this.url.searchParams.set(r,`${e}`),this}range(e,t,{foreignTable:n,referencedTable:r=n}={}){let i=r===void 0?`offset`:`${r}.offset`,a=r===void 0?`limit`:`${r}.limit`;return this.url.searchParams.set(i,`${e}`),this.url.searchParams.set(a,`${t-e+1}`),this}abortSignal(e){return this.signal=e,this}single(){return this.headers.set(`Accept`,`application/vnd.pgrst.object+json`),this}maybeSingle(){return this.method===`GET`?this.headers.set(`Accept`,`application/json`):this.headers.set(`Accept`,`application/vnd.pgrst.object+json`),this.isMaybeSingle=!0,this}csv(){return this.headers.set(`Accept`,`text/csv`),this}geojson(){return this.headers.set(`Accept`,`application/geo+json`),this}explain({analyze:e=!1,verbose:t=!1,settings:n=!1,buffers:r=!1,wal:i=!1,format:a=`text`}={}){let o=[e?`analyze`:null,t?`verbose`:null,n?`settings`:null,r?`buffers`:null,i?`wal`:null].filter(Boolean).join(`|`),s=this.headers.get(`Accept`)??`application/json`;return this.headers.set(`Accept`,`application/vnd.pgrst.plan+${a}; for="${s}"; options=${o};`),this}rollback(){return this.headers.append(`Prefer`,`tx=rollback`),this}returns(){return this}maxAffected(e){return this.headers.append(`Prefer`,`handling=strict`),this.headers.append(`Prefer`,`max-affected=${e}`),this}},ne=RegExp(`[,()]`),re=class extends te{eq(e,t){return this.url.searchParams.append(e,`eq.${t}`),this}neq(e,t){return this.url.searchParams.append(e,`neq.${t}`),this}gt(e,t){return this.url.searchParams.append(e,`gt.${t}`),this}gte(e,t){return this.url.searchParams.append(e,`gte.${t}`),this}lt(e,t){return this.url.searchParams.append(e,`lt.${t}`),this}lte(e,t){return this.url.searchParams.append(e,`lte.${t}`),this}like(e,t){return this.url.searchParams.append(e,`like.${t}`),this}likeAllOf(e,t){return this.url.searchParams.append(e,`like(all).{${t.join(`,`)}}`),this}likeAnyOf(e,t){return this.url.searchParams.append(e,`like(any).{${t.join(`,`)}}`),this}ilike(e,t){return this.url.searchParams.append(e,`ilike.${t}`),this}ilikeAllOf(e,t){return this.url.searchParams.append(e,`ilike(all).{${t.join(`,`)}}`),this}ilikeAnyOf(e,t){return this.url.searchParams.append(e,`ilike(any).{${t.join(`,`)}}`),this}regexMatch(e,t){return this.url.searchParams.append(e,`match.${t}`),this}regexIMatch(e,t){return this.url.searchParams.append(e,`imatch.${t}`),this}is(e,t){return this.url.searchParams.append(e,`is.${t}`),this}isDistinct(e,t){return this.url.searchParams.append(e,`isdistinct.${t}`),this}in(e,t){let n=Array.from(new Set(t)).map(e=>typeof e==`string`&&ne.test(e)?`"${e}"`:`${e}`).join(`,`);return this.url.searchParams.append(e,`in.(${n})`),this}notIn(e,t){let n=Array.from(new Set(t)).map(e=>typeof e==`string`&&ne.test(e)?`"${e}"`:`${e}`).join(`,`);return this.url.searchParams.append(e,`not.in.(${n})`),this}contains(e,t){return typeof t==`string`?this.url.searchParams.append(e,`cs.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cs.{${t.join(`,`)}}`):this.url.searchParams.append(e,`cs.${JSON.stringify(t)}`),this}containedBy(e,t){return typeof t==`string`?this.url.searchParams.append(e,`cd.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cd.{${t.join(`,`)}}`):this.url.searchParams.append(e,`cd.${JSON.stringify(t)}`),this}rangeGt(e,t){return this.url.searchParams.append(e,`sr.${t}`),this}rangeGte(e,t){return this.url.searchParams.append(e,`nxl.${t}`),this}rangeLt(e,t){return this.url.searchParams.append(e,`sl.${t}`),this}rangeLte(e,t){return this.url.searchParams.append(e,`nxr.${t}`),this}rangeAdjacent(e,t){return this.url.searchParams.append(e,`adj.${t}`),this}overlaps(e,t){return typeof t==`string`?this.url.searchParams.append(e,`ov.${t}`):this.url.searchParams.append(e,`ov.{${t.join(`,`)}}`),this}textSearch(e,t,{config:n,type:r}={}){let i=``;r===`plain`?i=`pl`:r===`phrase`?i=`ph`:r===`websearch`&&(i=`w`);let a=n===void 0?``:`(${n})`;return this.url.searchParams.append(e,`${i}fts${a}.${t}`),this}match(e){return Object.entries(e).forEach(([e,t])=>{this.url.searchParams.append(e,`eq.${t}`)}),this}not(e,t,n){return this.url.searchParams.append(e,`not.${t}.${n}`),this}or(e,{foreignTable:t,referencedTable:n=t}={}){let r=n?`${n}.or`:`or`;return this.url.searchParams.append(r,`(${e})`),this}filter(e,t,n){return this.url.searchParams.append(e,`${t}.${n}`),this}},ie=class{constructor(e,{headers:t={},schema:n,fetch:r,urlLengthLimit:i=8e3}){this.url=e,this.headers=new Headers(t),this.schema=n,this.fetch=r,this.urlLengthLimit=i}cloneRequestState(){return{url:new URL(this.url.toString()),headers:new Headers(this.headers)}}select(e,t){let{head:n=!1,count:r}=t??{},i=n?`HEAD`:`GET`,a=!1,o=(e??`*`).split(``).map(e=>/\s/.test(e)&&!a?``:(e===`"`&&(a=!a),e)).join(``),{url:s,headers:c}=this.cloneRequestState();return s.searchParams.set(`select`,o),r&&c.append(`Prefer`,`count=${r}`),new re({method:i,url:s,headers:c,schema:this.schema,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}insert(e,{count:t,defaultToNull:n=!0}={}){let{url:r,headers:i}=this.cloneRequestState();if(t&&i.append(`Prefer`,`count=${t}`),n||i.append(`Prefer`,`missing=default`),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);r.searchParams.set(`columns`,e.join(`,`))}}return new re({method:`POST`,url:r,headers:i,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}upsert(e,{onConflict:t,ignoreDuplicates:n=!1,count:r,defaultToNull:i=!0}={}){let{url:a,headers:o}=this.cloneRequestState();if(o.append(`Prefer`,`resolution=${n?`ignore`:`merge`}-duplicates`),t!==void 0&&a.searchParams.set(`on_conflict`,t),r&&o.append(`Prefer`,`count=${r}`),i||o.append(`Prefer`,`missing=default`),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);a.searchParams.set(`columns`,e.join(`,`))}}return new re({method:`POST`,url:a,headers:o,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}update(e,{count:t}={}){let{url:n,headers:r}=this.cloneRequestState();return t&&r.append(`Prefer`,`count=${t}`),new re({method:`PATCH`,url:n,headers:r,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}delete({count:e}={}){let{url:t,headers:n}=this.cloneRequestState();return e&&n.append(`Prefer`,`count=${e}`),new re({method:`DELETE`,url:t,headers:n,schema:this.schema,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}};function ae(e){"@babel/helpers - typeof";return ae=typeof Symbol==`function`&&typeof Symbol.iterator==`symbol`?function(e){return typeof e}:function(e){return e&&typeof Symbol==`function`&&e.constructor===Symbol&&e!==Symbol.prototype?`symbol`:typeof e},ae(e)}function A(e,t){if(ae(e)!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(ae(r)!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function j(e){var t=A(e,`string`);return ae(t)==`symbol`?t:t+``}function oe(e,t,n){return(t=j(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function se(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ce(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?se(Object(n),!0).forEach(function(t){oe(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):se(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}var le=class e{constructor(e,{headers:t={},schema:n,fetch:r,timeout:i,urlLengthLimit:a=8e3}={}){this.url=e,this.headers=new Headers(t),this.schemaName=n,this.urlLengthLimit=a;let o=r??globalThis.fetch;i!==void 0&&i>0?this.fetch=(e,t)=>{let n=new AbortController,r=setTimeout(()=>n.abort(),i),a=t?.signal;if(a){if(a.aborted)return clearTimeout(r),o(e,t);let i=()=>{clearTimeout(r),n.abort()};return a.addEventListener(`abort`,i,{once:!0}),o(e,ce(ce({},t),{},{signal:n.signal})).finally(()=>{clearTimeout(r),a.removeEventListener(`abort`,i)})}return o(e,ce(ce({},t),{},{signal:n.signal})).finally(()=>clearTimeout(r))}:this.fetch=o}from(e){if(!e||typeof e!=`string`||e.trim()===``)throw Error(`Invalid relation name: relation must be a non-empty string.`);return new ie(new URL(`${this.url}/${e}`),{headers:new Headers(this.headers),schema:this.schemaName,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}schema(t){return new e(this.url,{headers:this.headers,schema:t,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit})}rpc(e,t={},{head:n=!1,get:r=!1,count:i}={}){let a,o=new URL(`${this.url}/rpc/${e}`),s,c=e=>typeof e==`object`&&!!e&&(!Array.isArray(e)||e.some(c)),l=n&&Object.values(t).some(c);l?(a=`POST`,s=t):n||r?(a=n?`HEAD`:`GET`,Object.entries(t).filter(([e,t])=>t!==void 0).map(([e,t])=>[e,Array.isArray(t)?`{${t.join(`,`)}}`:`${t}`]).forEach(([e,t])=>{o.searchParams.append(e,t)})):(a=`POST`,s=t);let u=new Headers(this.headers);return l?u.set(`Prefer`,i?`count=${i},return=minimal`:`return=minimal`):i&&u.set(`Prefer`,`count=${i}`),new re({method:a,url:o,headers:u,schema:this.schemaName,body:s,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit})}},ue=class{constructor(){}static detectEnvironment(){if(typeof WebSocket<`u`)return{type:`native`,constructor:WebSocket};if(typeof globalThis<`u`&&globalThis.WebSocket!==void 0)return{type:`native`,constructor:globalThis.WebSocket};if(typeof global<`u`&&global.WebSocket!==void 0)return{type:`native`,constructor:global.WebSocket};if(typeof globalThis<`u`&&globalThis.WebSocketPair!==void 0&&globalThis.WebSocket===void 0)return{type:`cloudflare`,error:`Cloudflare Workers detected. WebSocket clients are not supported in Cloudflare Workers.`,workaround:`Use Cloudflare Workers WebSocket API for server-side WebSocket handling, or deploy to a different runtime.`};if(typeof globalThis<`u`&&globalThis.EdgeRuntime||typeof navigator<`u`&&navigator.userAgent?.includes(`Vercel-Edge`))return{type:`unsupported`,error:`Edge runtime detected (Vercel Edge/Netlify Edge). WebSockets are not supported in edge functions.`,workaround:`Use serverless functions or a different deployment target for WebSocket functionality.`};let e=globalThis.process;if(e){let t=e.versions;if(t&&t.node){let e=t.node,n=parseInt(e.replace(/^v/,``).split(`.`)[0]);return n>=22?globalThis.WebSocket===void 0?{type:`unsupported`,error:`Node.js ${n} detected but native WebSocket not found.`,workaround:`Provide a WebSocket implementation via the transport option.`}:{type:`native`,constructor:globalThis.WebSocket}:{type:`unsupported`,error:`Node.js ${n} detected without native WebSocket support.`,workaround:`For Node.js < 22, install "ws" package and provide it via the transport option:
 import ws from "ws"
 new RealtimeClient(url, { transport: ws })`}}}return{type:`unsupported`,error:`Unknown JavaScript runtime without WebSocket support.`,workaround:`Ensure you're running in a supported environment (browser, Node.js, Deno) or provide a custom WebSocket implementation.`}}static getWebSocketConstructor(){let e=this.detectEnvironment();if(e.constructor)return e.constructor;let t=e.error||`WebSocket not supported in this environment.`;throw e.workaround&&(t+=`\n\nSuggested solution: ${e.workaround}`),Error(t)}static createWebSocket(e,t){return new(this.getWebSocketConstructor())(e,t)}static isWebSocketSupported(){try{let e=this.detectEnvironment();return e.type===`native`||e.type===`ws`}catch{return!1}}},M=`realtime-js/2.99.2`,de=`1.0.0`,fe=`2.0.0`,pe=fe,me=1e4,he;(function(e){e[e.connecting=0]=`connecting`,e[e.open=1]=`open`,e[e.closing=2]=`closing`,e[e.closed=3]=`closed`})(he||={});var ge;(function(e){e.closed=`closed`,e.errored=`errored`,e.joined=`joined`,e.joining=`joining`,e.leaving=`leaving`})(ge||={});var _e;(function(e){e.close=`phx_close`,e.error=`phx_error`,e.join=`phx_join`,e.reply=`phx_reply`,e.leave=`phx_leave`,e.access_token=`access_token`})(_e||={});var ve;(function(e){e.websocket=`websocket`})(ve||={});var ye;(function(e){e.Connecting=`connecting`,e.Open=`open`,e.Closing=`closing`,e.Closed=`closed`})(ye||={});var be=class{constructor(e){this.HEADER_LENGTH=1,this.USER_BROADCAST_PUSH_META_LENGTH=6,this.KINDS={userBroadcastPush:3,userBroadcast:4},this.BINARY_ENCODING=0,this.JSON_ENCODING=1,this.BROADCAST_EVENT=`broadcast`,this.allowedMetadataKeys=[],this.allowedMetadataKeys=e??[]}encode(e,t){if(e.event===this.BROADCAST_EVENT&&!(e.payload instanceof ArrayBuffer)&&typeof e.payload.event==`string`)return t(this._binaryEncodeUserBroadcastPush(e));let n=[e.join_ref,e.ref,e.topic,e.event,e.payload];return t(JSON.stringify(n))}_binaryEncodeUserBroadcastPush(e){return this._isArrayBuffer(e.payload?.payload)?this._encodeBinaryUserBroadcastPush(e):this._encodeJsonUserBroadcastPush(e)}_encodeBinaryUserBroadcastPush(e){let t=e.payload?.payload??new ArrayBuffer(0);return this._encodeUserBroadcastPush(e,this.BINARY_ENCODING,t)}_encodeJsonUserBroadcastPush(e){let t=e.payload?.payload??{},n=new TextEncoder().encode(JSON.stringify(t)).buffer;return this._encodeUserBroadcastPush(e,this.JSON_ENCODING,n)}_encodeUserBroadcastPush(e,t,n){let r=e.topic,i=e.ref??``,a=e.join_ref??``,o=e.payload.event,s=this.allowedMetadataKeys?this._pick(e.payload,this.allowedMetadataKeys):{},c=Object.keys(s).length===0?``:JSON.stringify(s);if(a.length>255)throw Error(`joinRef length ${a.length} exceeds maximum of 255`);if(i.length>255)throw Error(`ref length ${i.length} exceeds maximum of 255`);if(r.length>255)throw Error(`topic length ${r.length} exceeds maximum of 255`);if(o.length>255)throw Error(`userEvent length ${o.length} exceeds maximum of 255`);if(c.length>255)throw Error(`metadata length ${c.length} exceeds maximum of 255`);let l=this.USER_BROADCAST_PUSH_META_LENGTH+a.length+i.length+r.length+o.length+c.length,u=new ArrayBuffer(this.HEADER_LENGTH+l),d=new DataView(u),f=0;d.setUint8(f++,this.KINDS.userBroadcastPush),d.setUint8(f++,a.length),d.setUint8(f++,i.length),d.setUint8(f++,r.length),d.setUint8(f++,o.length),d.setUint8(f++,c.length),d.setUint8(f++,t),Array.from(a,e=>d.setUint8(f++,e.charCodeAt(0))),Array.from(i,e=>d.setUint8(f++,e.charCodeAt(0))),Array.from(r,e=>d.setUint8(f++,e.charCodeAt(0))),Array.from(o,e=>d.setUint8(f++,e.charCodeAt(0))),Array.from(c,e=>d.setUint8(f++,e.charCodeAt(0)));var p=new Uint8Array(u.byteLength+n.byteLength);return p.set(new Uint8Array(u),0),p.set(new Uint8Array(n),u.byteLength),p.buffer}decode(e,t){if(this._isArrayBuffer(e))return t(this._binaryDecode(e));if(typeof e==`string`){let[n,r,i,a,o]=JSON.parse(e);return t({join_ref:n,ref:r,topic:i,event:a,payload:o})}return t({})}_binaryDecode(e){let t=new DataView(e),n=t.getUint8(0),r=new TextDecoder;switch(n){case this.KINDS.userBroadcast:return this._decodeUserBroadcast(e,t,r)}}_decodeUserBroadcast(e,t,n){let r=t.getUint8(1),i=t.getUint8(2),a=t.getUint8(3),o=t.getUint8(4),s=this.HEADER_LENGTH+4,c=n.decode(e.slice(s,s+r));s+=r;let l=n.decode(e.slice(s,s+i));s+=i;let u=n.decode(e.slice(s,s+a));s+=a;let d=e.slice(s,e.byteLength),f=o===this.JSON_ENCODING?JSON.parse(n.decode(d)):d,p={type:this.BROADCAST_EVENT,event:l,payload:f};return a>0&&(p.meta=JSON.parse(u)),{join_ref:null,ref:null,topic:c,event:this.BROADCAST_EVENT,payload:p}}_isArrayBuffer(e){return e instanceof ArrayBuffer||e?.constructor?.name===`ArrayBuffer`}_pick(e,t){return!e||typeof e!=`object`?{}:Object.fromEntries(Object.entries(e).filter(([e])=>t.includes(e)))}},xe=class{constructor(e,t){this.callback=e,this.timerCalc=t,this.timer=void 0,this.tries=0,this.callback=e,this.timerCalc=t}reset(){this.tries=0,clearTimeout(this.timer),this.timer=void 0}scheduleTimeout(){clearTimeout(this.timer),this.timer=setTimeout(()=>{this.tries+=1,this.callback()},this.timerCalc(this.tries+1))}},Se;(function(e){e.abstime=`abstime`,e.bool=`bool`,e.date=`date`,e.daterange=`daterange`,e.float4=`float4`,e.float8=`float8`,e.int2=`int2`,e.int4=`int4`,e.int4range=`int4range`,e.int8=`int8`,e.int8range=`int8range`,e.json=`json`,e.jsonb=`jsonb`,e.money=`money`,e.numeric=`numeric`,e.oid=`oid`,e.reltime=`reltime`,e.text=`text`,e.time=`time`,e.timestamp=`timestamp`,e.timestamptz=`timestamptz`,e.timetz=`timetz`,e.tsrange=`tsrange`,e.tstzrange=`tstzrange`})(Se||={});var Ce=(e,t,n={})=>{let r=n.skipTypes??[];return t?Object.keys(t).reduce((n,i)=>(n[i]=we(i,e,t,r),n),{}):{}},we=(e,t,n,r)=>{let i=t.find(t=>t.name===e)?.type,a=n[e];return i&&!r.includes(i)?Te(i,a):Ee(a)},Te=(e,t)=>{if(e.charAt(0)===`_`)return Ae(t,e.slice(1,e.length));switch(e){case Se.bool:return De(t);case Se.float4:case Se.float8:case Se.int2:case Se.int4:case Se.int8:case Se.numeric:case Se.oid:return Oe(t);case Se.json:case Se.jsonb:return ke(t);case Se.timestamp:return je(t);case Se.abstime:case Se.date:case Se.daterange:case Se.int4range:case Se.int8range:case Se.money:case Se.reltime:case Se.text:case Se.time:case Se.timestamptz:case Se.timetz:case Se.tsrange:case Se.tstzrange:return Ee(t);default:return Ee(t)}},Ee=e=>e,De=e=>{switch(e){case`t`:return!0;case`f`:return!1;default:return e}},Oe=e=>{if(typeof e==`string`){let t=parseFloat(e);if(!Number.isNaN(t))return t}return e},ke=e=>{if(typeof e==`string`)try{return JSON.parse(e)}catch{return e}return e},Ae=(e,t)=>{if(typeof e!=`string`)return e;let n=e.length-1,r=e[n];if(e[0]===`{`&&r===`}`){let r,i=e.slice(1,n);try{r=JSON.parse(`[`+i+`]`)}catch{r=i?i.split(`,`):[]}return r.map(e=>Te(t,e))}return e},je=e=>typeof e==`string`?e.replace(` `,`T`):e,Me=e=>{let t=new URL(e);return t.protocol=t.protocol.replace(/^ws/i,`http`),t.pathname=t.pathname.replace(/\/+$/,``).replace(/\/socket\/websocket$/i,``).replace(/\/socket$/i,``).replace(/\/websocket$/i,``),t.pathname===``||t.pathname===`/`?t.pathname=`/api/broadcast`:t.pathname+=`/api/broadcast`,t.href},Ne=class{constructor(e,t,n={},r=me){this.channel=e,this.event=t,this.payload=n,this.timeout=r,this.sent=!1,this.timeoutTimer=void 0,this.ref=``,this.receivedResp=null,this.recHooks=[],this.refEvent=null}resend(e){this.timeout=e,this._cancelRefEvent(),this.ref=``,this.refEvent=null,this.receivedResp=null,this.sent=!1,this.send()}send(){this._hasReceived(`timeout`)||(this.startTimeout(),this.sent=!0,this.channel.socket.push({topic:this.channel.topic,event:this.event,payload:this.payload,ref:this.ref,join_ref:this.channel._joinRef()}))}updatePayload(e){this.payload=Object.assign(Object.assign({},this.payload),e)}receive(e,t){return this._hasReceived(e)&&t(this.receivedResp?.response),this.recHooks.push({status:e,callback:t}),this}startTimeout(){this.timeoutTimer||=(this.ref=this.channel.socket._makeRef(),this.refEvent=this.channel._replyEventName(this.ref),this.channel._on(this.refEvent,{},e=>{this._cancelRefEvent(),this._cancelTimeout(),this.receivedResp=e,this._matchReceive(e)}),setTimeout(()=>{this.trigger(`timeout`,{})},this.timeout))}trigger(e,t){this.refEvent&&this.channel._trigger(this.refEvent,{status:e,response:t})}destroy(){this._cancelRefEvent(),this._cancelTimeout()}_cancelRefEvent(){this.refEvent&&this.channel._off(this.refEvent,{})}_cancelTimeout(){clearTimeout(this.timeoutTimer),this.timeoutTimer=void 0}_matchReceive({status:e,response:t}){this.recHooks.filter(t=>t.status===e).forEach(e=>e.callback(t))}_hasReceived(e){return this.receivedResp&&this.receivedResp.status===e}},Pe;(function(e){e.SYNC=`sync`,e.JOIN=`join`,e.LEAVE=`leave`})(Pe||={});var Fe=class e{constructor(t,n){this.channel=t,this.state={},this.pendingDiffs=[],this.joinRef=null,this.enabled=!1,this.caller={onJoin:()=>{},onLeave:()=>{},onSync:()=>{}};let r=n?.events||{state:`presence_state`,diff:`presence_diff`};this.channel._on(r.state,{},t=>{let{onJoin:n,onLeave:r,onSync:i}=this.caller;this.joinRef=this.channel._joinRef(),this.state=e.syncState(this.state,t,n,r),this.pendingDiffs.forEach(t=>{this.state=e.syncDiff(this.state,t,n,r)}),this.pendingDiffs=[],i()}),this.channel._on(r.diff,{},t=>{let{onJoin:n,onLeave:r,onSync:i}=this.caller;this.inPendingSyncState()?this.pendingDiffs.push(t):(this.state=e.syncDiff(this.state,t,n,r),i())}),this.onJoin((e,t,n)=>{this.channel._trigger(`presence`,{event:`join`,key:e,currentPresences:t,newPresences:n})}),this.onLeave((e,t,n)=>{this.channel._trigger(`presence`,{event:`leave`,key:e,currentPresences:t,leftPresences:n})}),this.onSync(()=>{this.channel._trigger(`presence`,{event:`sync`})})}static syncState(e,t,n,r){let i=this.cloneDeep(e),a=this.transformState(t),o={},s={};return this.map(i,(e,t)=>{a[e]||(s[e]=t)}),this.map(a,(e,t)=>{let n=i[e];if(n){let r=t.map(e=>e.presence_ref),i=n.map(e=>e.presence_ref),a=t.filter(e=>i.indexOf(e.presence_ref)<0),c=n.filter(e=>r.indexOf(e.presence_ref)<0);a.length>0&&(o[e]=a),c.length>0&&(s[e]=c)}else o[e]=t}),this.syncDiff(i,{joins:o,leaves:s},n,r)}static syncDiff(e,t,n,r){let{joins:i,leaves:a}={joins:this.transformState(t.joins),leaves:this.transformState(t.leaves)};return n||=()=>{},r||=()=>{},this.map(i,(t,r)=>{let i=e[t]??[];if(e[t]=this.cloneDeep(r),i.length>0){let n=e[t].map(e=>e.presence_ref),r=i.filter(e=>n.indexOf(e.presence_ref)<0);e[t].unshift(...r)}n(t,i,r)}),this.map(a,(t,n)=>{let i=e[t];if(!i)return;let a=n.map(e=>e.presence_ref);i=i.filter(e=>a.indexOf(e.presence_ref)<0),e[t]=i,r(t,i,n),i.length===0&&delete e[t]}),e}static map(e,t){return Object.getOwnPropertyNames(e).map(n=>t(n,e[n]))}static transformState(e){return e=this.cloneDeep(e),Object.getOwnPropertyNames(e).reduce((t,n)=>{let r=e[n];return`metas`in r?t[n]=r.metas.map(e=>(e.presence_ref=e.phx_ref,delete e.phx_ref,delete e.phx_ref_prev,e)):t[n]=r,t},{})}static cloneDeep(e){return JSON.parse(JSON.stringify(e))}onJoin(e){this.caller.onJoin=e}onLeave(e){this.caller.onLeave=e}onSync(e){this.caller.onSync=e}inPendingSyncState(){return!this.joinRef||this.joinRef!==this.channel._joinRef()}},Ie;(function(e){e.ALL=`*`,e.INSERT=`INSERT`,e.UPDATE=`UPDATE`,e.DELETE=`DELETE`})(Ie||={});var Le;(function(e){e.BROADCAST=`broadcast`,e.PRESENCE=`presence`,e.POSTGRES_CHANGES=`postgres_changes`,e.SYSTEM=`system`})(Le||={});var Re;(function(e){e.SUBSCRIBED=`SUBSCRIBED`,e.TIMED_OUT=`TIMED_OUT`,e.CLOSED=`CLOSED`,e.CHANNEL_ERROR=`CHANNEL_ERROR`})(Re||={});var ze=class e{constructor(e,t={config:{}},n){if(this.topic=e,this.params=t,this.socket=n,this.bindings={},this.state=ge.closed,this.joinedOnce=!1,this.pushBuffer=[],this.subTopic=e.replace(/^realtime:/i,``),this.params.config=Object.assign({broadcast:{ack:!1,self:!1},presence:{key:``,enabled:!1},private:!1},t.config),this.timeout=this.socket.timeout,this.joinPush=new Ne(this,_e.join,this.params,this.timeout),this.rejoinTimer=new xe(()=>this._rejoinUntilConnected(),this.socket.reconnectAfterMs),this.joinPush.receive(`ok`,()=>{this.state=ge.joined,this.rejoinTimer.reset(),this.pushBuffer.forEach(e=>e.send()),this.pushBuffer=[]}),this._onClose(()=>{this.rejoinTimer.reset(),this.socket.log(`channel`,`close ${this.topic} ${this._joinRef()}`),this.state=ge.closed,this.socket._remove(this)}),this._onError(e=>{this._isLeaving()||this._isClosed()||(this.socket.log(`channel`,`error ${this.topic}`,e),this.state=ge.errored,this.rejoinTimer.scheduleTimeout())}),this.joinPush.receive(`timeout`,()=>{this._isJoining()&&(this.socket.log(`channel`,`timeout ${this.topic}`,this.joinPush.timeout),this.state=ge.errored,this.rejoinTimer.scheduleTimeout())}),this.joinPush.receive(`error`,e=>{this._isLeaving()||this._isClosed()||(this.socket.log(`channel`,`error ${this.topic}`,e),this.state=ge.errored,this.rejoinTimer.scheduleTimeout())}),this._on(_e.reply,{},(e,t)=>{this._trigger(this._replyEventName(t),e)}),this.presence=new Fe(this),this.broadcastEndpointURL=Me(this.socket.endPoint),this.private=this.params.config.private||!1,!this.private&&this.params.config?.broadcast?.replay)throw`tried to use replay on public channel '${this.topic}'. It must be a private channel.`}subscribe(t,n=this.timeout){if(this.socket.isConnected()||this.socket.connect(),this.state==ge.closed){let{config:{broadcast:r,presence:i,private:a}}=this.params,o=this.bindings.postgres_changes?.map(e=>e.filter)??[],s=!!this.bindings[Le.PRESENCE]&&this.bindings[Le.PRESENCE].length>0||this.params.config.presence?.enabled===!0,c={},l={broadcast:r,presence:Object.assign(Object.assign({},i),{enabled:s}),postgres_changes:o,private:a};this.socket.accessTokenValue&&(c.access_token=this.socket.accessTokenValue),this._onError(e=>t?.(Re.CHANNEL_ERROR,e)),this._onClose(()=>t?.(Re.CLOSED)),this.updateJoinPayload(Object.assign({config:l},c)),this.joinedOnce=!0,this._rejoin(n),this.joinPush.receive(`ok`,async({postgres_changes:n})=>{if(this.socket._isManualToken()||this.socket.setAuth(),n===void 0){t?.(Re.SUBSCRIBED);return}else{let r=this.bindings.postgres_changes,i=r?.length??0,a=[];for(let o=0;o<i;o++){let i=r[o],{filter:{event:s,schema:c,table:l,filter:u}}=i,d=n&&n[o];if(d&&d.event===s&&e.isFilterValueEqual(d.schema,c)&&e.isFilterValueEqual(d.table,l)&&e.isFilterValueEqual(d.filter,u))a.push(Object.assign(Object.assign({},i),{id:d.id}));else{this.unsubscribe(),this.state=ge.errored,t?.(Re.CHANNEL_ERROR,Error(`mismatch between server and client bindings for postgres changes`));return}}this.bindings.postgres_changes=a,t&&t(Re.SUBSCRIBED);return}}).receive(`error`,e=>{this.state=ge.errored,t?.(Re.CHANNEL_ERROR,Error(JSON.stringify(Object.values(e).join(`, `)||`error`)))}).receive(`timeout`,()=>{t?.(Re.TIMED_OUT)})}return this}presenceState(){return this.presence.state}async track(e,t={}){return await this.send({type:`presence`,event:`track`,payload:e},t.timeout||this.timeout)}async untrack(e={}){return await this.send({type:`presence`,event:`untrack`},e)}on(e,t,n){return this.state===ge.joined&&e===Le.PRESENCE&&(this.socket.log(`channel`,`resubscribe to ${this.topic} due to change in presence callbacks on joined channel`),this.unsubscribe().then(async()=>await this.subscribe())),this._on(e,t,n)}async httpSend(e,t,n={}){if(t==null)return Promise.reject(`Payload is required for httpSend()`);let r={apikey:this.socket.apiKey?this.socket.apiKey:``,"Content-Type":`application/json`};this.socket.accessTokenValue&&(r.Authorization=`Bearer ${this.socket.accessTokenValue}`);let i={method:`POST`,headers:r,body:JSON.stringify({messages:[{topic:this.subTopic,event:e,payload:t,private:this.private}]})},a=await this._fetchWithTimeout(this.broadcastEndpointURL,i,n.timeout??this.timeout);if(a.status===202)return{success:!0};let o=a.statusText;try{let e=await a.json();o=e.error||e.message||o}catch{}return Promise.reject(Error(o))}async send(e,t={}){if(!this._canPush()&&e.type===`broadcast`){console.warn(`Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.`);let{event:n,payload:r}=e,i={apikey:this.socket.apiKey?this.socket.apiKey:``,"Content-Type":`application/json`};this.socket.accessTokenValue&&(i.Authorization=`Bearer ${this.socket.accessTokenValue}`);let a={method:`POST`,headers:i,body:JSON.stringify({messages:[{topic:this.subTopic,event:n,payload:r,private:this.private}]})};try{let e=await this._fetchWithTimeout(this.broadcastEndpointURL,a,t.timeout??this.timeout);return await e.body?.cancel(),e.ok?`ok`:`error`}catch(e){return e.name===`AbortError`?`timed out`:`error`}}else return new Promise(n=>{let r=this._push(e.type,e,t.timeout||this.timeout);e.type===`broadcast`&&!this.params?.config?.broadcast?.ack&&n(`ok`),r.receive(`ok`,()=>n(`ok`)),r.receive(`error`,()=>n(`error`)),r.receive(`timeout`,()=>n(`timed out`))})}updateJoinPayload(e){this.joinPush.updatePayload(e)}unsubscribe(e=this.timeout){this.state=ge.leaving;let t=()=>{this.socket.log(`channel`,`leave ${this.topic}`),this._trigger(_e.close,`leave`,this._joinRef())};this.joinPush.destroy();let n=null;return new Promise(r=>{n=new Ne(this,_e.leave,{},e),n.receive(`ok`,()=>{t(),r(`ok`)}).receive(`timeout`,()=>{t(),r(`timed out`)}).receive(`error`,()=>{r(`error`)}),n.send(),this._canPush()||n.trigger(`ok`,{})}).finally(()=>{n?.destroy()})}teardown(){this.pushBuffer.forEach(e=>e.destroy()),this.pushBuffer=[],this.rejoinTimer.reset(),this.joinPush.destroy(),this.state=ge.closed,this.bindings={}}async _fetchWithTimeout(e,t,n){let r=new AbortController,i=setTimeout(()=>r.abort(),n),a=await this.socket.fetch(e,Object.assign(Object.assign({},t),{signal:r.signal}));return clearTimeout(i),a}_push(e,t,n=this.timeout){if(!this.joinedOnce)throw`tried to push '${e}' to '${this.topic}' before joining. Use channel.subscribe() before pushing events`;let r=new Ne(this,e,t,n);return this._canPush()?r.send():this._addToPushBuffer(r),r}_addToPushBuffer(e){if(e.startTimeout(),this.pushBuffer.push(e),this.pushBuffer.length>100){let e=this.pushBuffer.shift();e&&(e.destroy(),this.socket.log(`channel`,`discarded push due to buffer overflow: ${e.event}`,e.payload))}}_onMessage(e,t,n){return t}_isMember(e){return this.topic===e}_joinRef(){return this.joinPush.ref}_trigger(e,t,n){var r,i;let a=e.toLocaleLowerCase(),{close:o,error:s,leave:c,join:l}=_e;if(n&&[o,s,c,l].indexOf(a)>=0&&n!==this._joinRef())return;let u=this._onMessage(a,t,n);if(t&&!u)throw`channel onMessage callbacks must return the payload, modified or unmodified`;[`insert`,`update`,`delete`].includes(a)?(r=this.bindings.postgres_changes)==null||r.filter(e=>e.filter?.event===`*`||(e.filter?.event)?.toLocaleLowerCase()===a).map(e=>e.callback(u,n)):(i=this.bindings[a])==null||i.filter(e=>{if([`broadcast`,`presence`,`postgres_changes`].includes(a))if(`id`in e){let n=e.id,r=e.filter?.event;return n&&t.ids?.includes(n)&&(r===`*`||r?.toLocaleLowerCase()===t.data?.type.toLocaleLowerCase())}else{let n=(e?.filter?.event)?.toLocaleLowerCase();return n===`*`||n===(t?.event)?.toLocaleLowerCase()}else return e.type.toLocaleLowerCase()===a}).map(e=>{if(typeof u==`object`&&`ids`in u){let e=u.data,{schema:t,table:n,commit_timestamp:r,type:i,errors:a}=e,o={schema:t,table:n,commit_timestamp:r,eventType:i,new:{},old:{},errors:a};u=Object.assign(Object.assign({},o),this._getPayloadRecords(e))}e.callback(u,n)})}_isClosed(){return this.state===ge.closed}_isJoined(){return this.state===ge.joined}_isJoining(){return this.state===ge.joining}_isLeaving(){return this.state===ge.leaving}_replyEventName(e){return`chan_reply_${e}`}_on(e,t,n){let r=e.toLocaleLowerCase(),i={type:r,filter:t,callback:n};return this.bindings[r]?this.bindings[r].push(i):this.bindings[r]=[i],this}_off(t,n){let r=t.toLocaleLowerCase();return this.bindings[r]&&(this.bindings[r]=this.bindings[r].filter(t=>!(t.type?.toLocaleLowerCase()===r&&e.isEqual(t.filter,n)))),this}static isEqual(e,t){if(Object.keys(e).length!==Object.keys(t).length)return!1;for(let n in e)if(e[n]!==t[n])return!1;return!0}static isFilterValueEqual(e,t){return(e??void 0)===(t??void 0)}_rejoinUntilConnected(){this.rejoinTimer.scheduleTimeout(),this.socket.isConnected()&&this._rejoin()}_onClose(e){this._on(_e.close,{},e)}_onError(e){this._on(_e.error,{},t=>e(t))}_canPush(){return this.socket.isConnected()&&this._isJoined()}_rejoin(e=this.timeout){this._isLeaving()||(this.socket._leaveOpenTopic(this.topic),this.state=ge.joining,this.joinPush.resend(e))}_getPayloadRecords(e){let t={new:{},old:{}};return(e.type===`INSERT`||e.type===`UPDATE`)&&(t.new=Ce(e.columns,e.record)),(e.type===`UPDATE`||e.type===`DELETE`)&&(t.old=Ce(e.columns,e.old_record)),t}},Be=()=>{},Ve={HEARTBEAT_INTERVAL:25e3,RECONNECT_DELAY:10,HEARTBEAT_TIMEOUT_FALLBACK:100},He=[1e3,2e3,5e3,1e4],Ue=1e4,We=`
   addEventListener("message", (e) => {
