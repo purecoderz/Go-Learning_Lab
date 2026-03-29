@@ -3066,7 +3066,7 @@ func main() {
     fmt.Println("Level:", level)
     fmt.Println("Score:", score)  // Should show 75
     fmt.Println("Mana:", mana)    // Should show 70
-}`,codeTaskDescription:`Update mana and score using = (not :=) with math`,checkCode:e=>{let t=/package\s+main[\s\S]*?import\s+"fmt"[\s\S]*?func\s+main\s*\(\s*\)\s*\{/.test(e),n=/mana\s*=\s*70/.test(e)||/mana\s*=\s*mana\s*-\s*30/.test(e)||/mana\s*-=\s*30/.test(e),r=/score\s*=\s*75/.test(e)||/score\s*=\s*score\s*\+\s*25/.test(e)||/score\s*\+=\s*25/.test(e),i=!/mana\s*:=/.test(e),a=!/score\s*:=/.test(e);return t&&n&&r&&i&&a},hints:[`mana = mana - 30 or mana -= 30`,`score = score + 25 or score += 25`,`Use = not := (updating, not creating)`,`Or set directly: mana = 70, score = 75`]},{id:5,heading:`🎯 Task 5: The Master Assembly`,text:`Finally! Tunde leveled up to **level 6**, and he found a health potion that gave him **+20 health** (now 170).
+}`,codeTaskDescription:`Update mana and score using = (not :=) with math`,checkCode:e=>{let t=/package\s+main[\s\S]*?import\s+"fmt"[\s\S]*?func\s+main\s*\(\s*\)\s*\{/.test(e),n=/mana\s*(?<!:)=\s*(70|mana\s*-\s*30)/.test(e)||/mana\s*-=\s*30/.test(e),r=/score\s*(?<!:)=\s*(75|score\s*\+\s*25)/.test(e)||/score\s*\+=\s*25/.test(e);return t&&n&&r},hints:[`mana = mana - 30 or mana -= 30`,`score = score + 25 or score += 25`,`Use = not := (updating, not creating)`,`Or set directly: mana = 70, score = 75`]},{id:5,heading:`🎯 Task 5: The Master Assembly`,text:`Finally! Tunde leveled up to **level 6**, and he found a health potion that gave him **+20 health** (now 170).
 
 **Your task:**
 1. Update \`level\` to 6
